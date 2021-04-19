@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Elio Workspace</title>
+        <link rel="stylesheet" href="elio_workspace_style.css">
+        <script src="../ressources/blockly_compressed.js"></script>
+        <script src="../ressources/blocks_compressed.js"></script>
+        <script src="../ressources/javascript_compressed.js"></script>
+        <script src="../Blocks/elio_blocks.js"></script>
+    </head>
+    
+    <div id="blockly-div" style=" height: 480px; width: 600px;"></div>
+    <div class="button-div">
+        <form method="get" action="file.c">
+            <button type="submit">Télécharger mon code</button>
+        </form>
+    </div>
+
+    <body>
+        <div id="draw-div">
+            <canvas id="canvaspad" width="600" height="480" style="border:1px solid #030303; background: white;" >
+            Your browser does not support the HTML5 canvas tag.</canvas>
+        </div>
+    </body>
+
+    <xml xmlns="https://developers.google.com/blockly/xml" id="workspaceBlocks" style="display: none"></xml>
+
+    <!-- Barre de sélection des blocks -->
+    <xml xmlns="https://developers.google.com/blockly/xml" id="toolbox" style="display: none">
+        <category name="Architecture">
+          <block type="fonction"></block>
+          <block type="fonction_principale"></block>
+          <block type="zone_prog"></block>
+        </category>
+        <category name="Structures">
+        </category>
+        <category name="Mouvement">
+        </category>
+        <category name="Obstacles">
+        </category>
+        <category name="Suivi de ligne">
+        </category>
+        <category name="Bouton">
+        </category>
+        <category name="Capteur de couleurs">
+        </category>
+        <category name="LEDs RGB">
+        </category>
+        <category name="Bip boup">
+        </category>
+    </xml>
+
+    <script>
+        /* TODO: Change toolbox XML ID if necessary. Can export toolbox XML from Workspace Factory. */
+        var toolbox = document.getElementById("toolbox");
+
+        var options = { 
+            toolbox : toolbox, 
+            collapse : true, 
+            comments : true, 
+            disable : true, 
+            maxBlocks : Infinity, 
+            trashcan : true, 
+            horizontalLayout : false, 
+            toolboxPosition : 'start', 
+            css : true, 
+            media : 'https://blockly-demo.appspot.com/static/media/', 
+            rtl : false, 
+            scrollbars : true, 
+            sounds : true, 
+            oneBasedIndex : true
+        };
+
+        /* Inject your workspace */ 
+        var workspace = Blockly.inject('blockly-div', options);
+
+        /* Load Workspace Blocks from XML to workspace. Remove all code below if no blocks to load */
+
+        /* TODO: Change workspace blocks XML ID if necessary. Can export workspace blocks XML from Workspace Factory. */
+        var workspaceBlocks = document.getElementById("workspaceBlocks"); 
+
+        /* Load blocks to workspace. */
+        Blockly.Xml.domToWorkspace(workspaceBlocks, workspace);
+
+        
+    </script>
+</html>
+
