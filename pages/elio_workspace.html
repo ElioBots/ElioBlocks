@@ -7,6 +7,8 @@
         <script src="../ressources/blocks_compressed.js"></script>
         <script src="../ressources/javascript_compressed.js"></script>
         <script src="../Blocks/elio_blocks.js"></script>
+        <script src="../Blocks/conditions.js"></script>
+        <script src="../Blocks/boucles.js"></script>
     </head>
     
     <div id="blockly-div" style=" height: 480px; width: 600px;"></div>
@@ -32,7 +34,43 @@
           <block type="fonction_principale"></block>
           <block type="zone_prog"></block>
         </category>
-        <category name="Structures">
+        <category name="Conditions">
+            <block type="controls_if"></block>
+            <block type="logic_compare"></block>
+            <block type="logic_operation"></block>
+            <block type="logic_negate"></block>
+            <block type="logic_boolean"></block>
+            <block type="logic_null"></block>
+            <block type="logic_ternary"></block>
+        </category>
+        <category name="Boucles">
+            <block type="controls_repeat_ext">
+                <value name="TIMES">
+                  <shadow type="math_number">
+                    <field name="NUM">10</field>
+                  </shadow>
+                </value>
+            </block>
+            <block type="controls_whileUntil"></block>
+            <block type="controls_for">
+                <value name="FROM">
+                  <shadow type="math_number">
+                    <field name="NUM">1</field>
+                  </shadow>
+                </value>
+                <value name="TO">
+                  <shadow type="math_number">
+                    <field name="NUM">10</field>
+                  </shadow>
+                </value>
+                <value name="BY">
+                  <shadow type="math_number">
+                    <field name="NUM">1</field>
+                  </shadow>
+                </value>
+            </block>
+            <block type="controls_forEach"></block>
+            <block type="controls_flow_statements"></block>
         </category>
         <category name="Mouvement">
         </category>
@@ -49,7 +87,6 @@
         <category name="Bip boup">
         </category>
     </xml>
-
     <script>
         /* TODO: Change toolbox XML ID if necessary. Can export toolbox XML from Workspace Factory. */
         var toolbox = document.getElementById("toolbox");
@@ -81,8 +118,6 @@
 
         /* Load blocks to workspace. */
         Blockly.Xml.domToWorkspace(workspaceBlocks, workspace);
-
-        
     </script>
 </html>
 
