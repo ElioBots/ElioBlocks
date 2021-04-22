@@ -470,13 +470,13 @@ Blockly.Constants.Logic.CONTROLS_IF_MUTATOR_MIXIN = {
     {
       this.appendValueInput('IF' + i)
           .setCheck('Boolean')
-          .appendField(Blockly.Msg['CONTROLS_IF_MSG_ELSEIF']);
+          .appendField(Blockly.Msg['Sinon Si']);
       this.appendStatementInput('DO' + i)
-          .appendField(Blockly.Msg['CONTROLS_IF_MSG_THEN']);
+          .appendField(Blockly.Msg['Alors']);
     }
     if (this.elseCount_) {
       this.appendStatementInput('ELSE')
-          .appendField(Blockly.Msg['CONTROLS_IF_MSG_ELSE']);
+          .appendField(Blockly.Msg['Sinon']);
     }
   },
   /**
@@ -656,4 +656,3 @@ Blockly.Constants.Logic.LOGIC_TERNARY_ONCHANGE_MIXIN = {
     this.prevParentConnection_ = parentConnection;
   }
 };
-

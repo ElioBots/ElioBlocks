@@ -6,8 +6,8 @@
         <script src="../ressources/blockly_compressed.js"></script>
         <script src="../ressources/blocks_compressed.js"></script>
         <script src="../ressources/javascript_compressed.js"></script>
-        <script src="../Blocks/elio_blocks.js"></script>
         <script src="../Blocks/conditions.js"></script>
+        <script src="../Blocks/elio_blocks.js"></script>
         <script src="../Blocks/boucles.js"></script>
     </head>
     
@@ -17,13 +17,6 @@
             <button type="submit">Télécharger mon code</button>
         </form>
     </div>
-
-    <body>
-        <div id="draw-div">
-            <canvas id="canvaspad" width="600" height="480" style="border:1px solid #030303; background: white;" >
-            Your browser does not support the HTML5 canvas tag.</canvas>
-        </div>
-    </body>
 
     <xml xmlns="https://developers.google.com/blockly/xml" id="workspaceBlocks" style="display: none"></xml>
 
@@ -35,13 +28,15 @@
           <block type="zone_prog"></block>
         </category>
         <category name="Conditions">
-            <block type="controls_if"></block>
-            <block type="logic_compare"></block>
-            <block type="logic_operation"></block>
-            <block type="logic_negate"></block>
-            <block type="logic_boolean"></block>
-            <block type="logic_null"></block>
-            <block type="logic_ternary"></block>
+          <block type="controls_if"></block>  
+          <block type="logic_compare"></block>
+          <block type="logic_operation"></block>
+          <block type="logic_boolean"></block>
+          <block type="logic_null"></block>
+          <block type="logic_ternary"></block>
+          <!-- Isolement de cette possibilité, faisant bugger l'affichage
+          <block type="logic_negate"></block>
+          -->
         </category>
         <category name="Boucles">
             <block type="controls_repeat_ext">
@@ -87,37 +82,7 @@
         <category name="Bip boup">
         </category>
     </xml>
-    <script>
-        /* TODO: Change toolbox XML ID if necessary. Can export toolbox XML from Workspace Factory. */
-        var toolbox = document.getElementById("toolbox");
 
-        var options = { 
-            toolbox : toolbox, 
-            collapse : true, 
-            comments : true, 
-            disable : true, 
-            maxBlocks : Infinity, 
-            trashcan : true, 
-            horizontalLayout : false, 
-            toolboxPosition : 'start', 
-            css : true, 
-            media : 'https://blockly-demo.appspot.com/static/media/', 
-            rtl : false, 
-            scrollbars : true, 
-            sounds : true, 
-            oneBasedIndex : true
-        };
-
-        /* Inject your workspace */ 
-        var workspace = Blockly.inject('blockly-div', options);
-
-        /* Load Workspace Blocks from XML to workspace. Remove all code below if no blocks to load */
-
-        /* TODO: Change workspace blocks XML ID if necessary. Can export workspace blocks XML from Workspace Factory. */
-        var workspaceBlocks = document.getElementById("workspaceBlocks"); 
-
-        /* Load blocks to workspace. */
-        Blockly.Xml.domToWorkspace(workspaceBlocks, workspace);
-    </script>
+    <script src="code.js"></script>
 </html>
 
