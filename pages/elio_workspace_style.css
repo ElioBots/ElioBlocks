@@ -5,8 +5,8 @@ html, body
 }
 #draw-div, #blockly-div
 {
-    width:100px;
-    height:100px;
+    width:200px;
+    height:200px;
     margin-left: 20px;
     margin-right:10px;
     float:left;

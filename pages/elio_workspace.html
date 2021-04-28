@@ -1,21 +1,32 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Elio Workspace</title>
-        <link rel="stylesheet" href="elio_workspace_style.css">
-        <script src="../ressources/blockly_compressed.js"></script>
-        <script src="../ressources/blocks_compressed.js"></script>
-        <script src="../ressources/javascript_compressed.js"></script>
-        <script src="../Blocks/conditions.js"></script>
-        <script src="../Blocks/elio_blocks.js"></script>
-        <script src="../Blocks/boucles.js"></script>
-    </head>
+  <head>
+    <title>Elio Workspace</title>
+    <link rel="stylesheet" href="elio_workspace_style.css">
+    <script src="code_language.js"></script>
+    <script src="../msg/messages.js"></script>
+    <script src="../ressources/blockly_compressed.js"></script>
+    <script src="../ressources/blocks_compressed.js"></script>
+    <script src="../ressources/javascript_compressed.js"></script>
+    <script src="../Blocks/conditions.js"></script>
+    <script src="../Blocks/elio_blocks.js"></script>
+    <script src="../Blocks/boucles.js"></script>
+  </head>
+  <body>
+    <div>
+      <select id="changeAppLanguage">
+        <option value="">--Please choose a language--</option>
+        <option value="fr" onclick="CreateFrenchFromJSON()" value="Charger l'application en Français">Français</option>
+        <option value="en" onclick="CreateEnglishFromJSON()" value="Charge the application in English">English</option>
+      </select>
+      <p id="showData"></p>
+    </div>
     
     <div id="blockly-div" style=" height: 480px; width: 600px;"></div>
     <div class="button-div">
-        <form method="get" action="file.c">
-            <button type="submit">Télécharger mon code</button>
-        </form>
+      <form method="get" action="file.c">
+        <button type="submit">Télécharger mon code</button>
+      </form>
     </div>
 
     <xml xmlns="https://developers.google.com/blockly/xml" id="workspaceBlocks" style="display: none"></xml>
@@ -38,34 +49,13 @@
           <block type="logic_negate"></block>
           -->
         </category>
-        <category name="Boucles">
-            <block type="controls_repeat_ext">
-                <value name="TIMES">
-                  <shadow type="math_number">
-                    <field name="NUM">10</field>
-                  </shadow>
-                </value>
-            </block>
-            <block type="controls_whileUntil"></block>
-            <block type="controls_for">
-                <value name="FROM">
-                  <shadow type="math_number">
-                    <field name="NUM">1</field>
-                  </shadow>
-                </value>
-                <value name="TO">
-                  <shadow type="math_number">
-                    <field name="NUM">10</field>
-                  </shadow>
-                </value>
-                <value name="BY">
-                  <shadow type="math_number">
-                    <field name="NUM">1</field>
-                  </shadow>
-                </value>
-            </block>
-            <block type="controls_forEach"></block>
-            <block type="controls_flow_statements"></block>
+        <category name="Boucles"></block>
+          <block type="controls_whileUntil"></block>
+          <!--
+          <block type="controls_for"></block>
+          <block type="controls_forEach"></block>
+          <block type="controls_flow_statements"></block>
+          -->
         </category>
         <category name="Mouvement">
         </category>
@@ -82,7 +72,7 @@
         <category name="Bip boup">
         </category>
     </xml>
-
     <script src="code.js"></script>
+  </body>
 </html>
 
