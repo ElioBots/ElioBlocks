@@ -9,6 +9,8 @@
     <script src="../Blocks/conditions.js"></script>
     <script src="../Blocks/elio_blocks.js"></script>
     <script src="../Blocks/boucles.js"></script>
+    <script src="../generators/blocks/conditions.js"></script>
+    <script src="affichageCode.js"></script>
     <script src="../msg/js/fr.js"></script>
   </head>
   <body>
@@ -20,13 +22,19 @@
       </select>
       <p id="showData"></p>
     </div>
+
     
     <div id="blockly-div" style=" height: 480px; width: 600px;"></div>
+
     <div class="button-div">
-      <form method="get" action="file.c">
-        <button type="submit">Télécharger mon code</button>
-      </form>
+      <button class="button" onclick="runCode()">Voir mon code</button>
     </div>
+
+    <div id="draw-div">
+      <canvas id="canvaspad" width="600" height="480" style="border:1px solid #030303; background: white;" >
+      Your browser does not support the HTML5 canvas tag.</canvas>
+    </div>
+    
 
     <xml xmlns="https://developers.google.com/blockly/xml" id="workspaceBlocks" style="display: none"></xml>
 
