@@ -73,10 +73,13 @@ Blockly.Arduino['logic_operation'] = function (block)
     {
         // Single missing arguments have no effect on the return value.
         var defaultArgument = (operator == '&&') ? 'true' : 'false';
-        if (!argument0) {
+        if (!argument0) 
+        {
             argument0 = defaultArgument;
         }
-        if (!argument1) {
+        
+        if (!argument1) 
+        {
             argument1 = defaultArgument;
         }
     }
