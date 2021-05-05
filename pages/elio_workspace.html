@@ -10,7 +10,6 @@
     <script src="../Blocks/elio_blocks.js"></script>
     <script src="../Blocks/boucles.js"></script>
     <script src="../generators/blocks/conditions.js"></script>
-    <script src="affichageCode.js"></script>
     <script src="../msg/js/fr.js"></script>
   </head>
   <body>
@@ -27,7 +26,7 @@
     <div id="blockly-div" style=" height: 480px; width: 600px;"></div>
 
     <div class="button-div">
-      <button class="button" onclick="runCode()">Télécharger mon code</button>
+      <button class="button" onclick="getCode(fichier)">Télécharger mon code</button>
     </div>
 
     <div id="draw-div">
@@ -79,7 +78,8 @@
         <category name="Bip boup">
         </category>
     </xml>
-    <script src="code.js"></script>
+    <script src="./code.js"></script>
+    <script src="./affichageCode.js"></script>
   </body>
 </html>
 
