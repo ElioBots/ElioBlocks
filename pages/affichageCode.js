@@ -1,12 +1,5 @@
-import * as fichier from  'fs'
+/**
+ * @author : Boutrois Romain & Morel Guillaume
+ * @description : Ficher assurant les fonctions liées à la récupération du code issu du programme créé via les blocs
+ */
 
-function getCode(fichier)
-{
-    var code = Blockly.JavaScript.workspaceToCode(workspace);
-
-    
-    var fichierResultat = fichier.writeFile("testfile.c", 2, true);
-
-    fichierResultat.WriteLine(code);
-    fichierResultat.Close();
-}

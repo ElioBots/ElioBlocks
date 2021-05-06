@@ -1,3 +1,7 @@
+/**
+ * Fichier pas très utile pour le moment
+ */
+
 Blockly.Msg.LOGIC_BOOLEAN_TRUE = "vrai",
 Blockly.Msg.LOGIC_BOOLEAN_FALSE = "faux",
 Blockly.Msg.CONTROLS_IF_MSG_IF = "Si",

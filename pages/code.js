@@ -1,3 +1,8 @@
+/**
+ * @author : Boutrois Romain & Morel Guillaume
+ * @description : Partie code de l'environement permettant d'afficher correcctement les blocs.s
+ */
+
 /* TODO: Change toolbox XML ID if necessary. Can export toolbox XML from Workspace Factory. */
 var toolbox = document.getElementById("toolbox");
 
