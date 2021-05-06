@@ -9,7 +9,7 @@ html, body
     overflow-x: hidden;
 }
 
-#resultat-zone, #blockly-div
+#content_code, #blockly-div
 {
     width:200px;
     height:200px;
@@ -19,7 +19,7 @@ html, body
     margin-top: 50px;
 }
 
-#resultat-zone
+#content_code
 {
     background-color: dimgrey;
 }
