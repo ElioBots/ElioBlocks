@@ -1,3 +1,4 @@
+<!-- Page d'affichage de l'application -->
 <!DOCTYPE html>
 <html>
   <head>
@@ -11,6 +12,7 @@
     <script src="../Blocks/boucles.js"></script>
     <script src="../generators/blocks/conditions.js"></script>
     <script src="../msg/js/fr.js"></script>
+    <script src="../generators/arduino.js"></script>
   </head>
   <body>
     <div>
@@ -53,15 +55,16 @@
           <block type="logic_ternary"></block>
           <!-- Isolement de cette possibilité, faisant bugger l'affichage
           <block type="logic_negate"></block>
-          -->
+           -->
         </category>
         <category name="Boucles"></block>
           <block type="controls_whileUntil"></block>
-          <!--
+          <!-- Isolement de cette possibilité, faisant bugger l'affichage
           <block type="controls_for"></block>
           <block type="controls_forEach"></block>
           <block type="controls_flow_statements"></block>
           -->
+        
         </category>
         <category name="Mouvement">
         </category>

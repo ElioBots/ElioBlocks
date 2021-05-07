@@ -1,10 +1,12 @@
 'use strict';
 
+/*
 goog.provide('Blockly.Arduino');
 
 goog.require('Blockly.Boards');
 goog.require('Blockly.Generator');
 goog.require('Blockly.utils.string');
+*/
 
 /**
  * Arduino code generator.

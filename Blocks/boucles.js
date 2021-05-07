@@ -15,6 +15,7 @@
  */
 'use strict';
 
+/*
 goog.provide('Blockly.Blocks.loops');  // Deprecated
 goog.provide('Blockly.Constants.Loops');
 
@@ -25,7 +26,7 @@ goog.require('Blockly.FieldLabel');
 goog.require('Blockly.FieldNumber');
 goog.require('Blockly.FieldVariable');
 goog.require('Blockly.Warning');
-
+*/
 
 /**
  * Unused constant for the common HSV hue for all blocks in this category.
