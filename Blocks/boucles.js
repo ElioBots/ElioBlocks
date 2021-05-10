@@ -15,7 +15,7 @@
  */
 'use strict';
 
-/*
+
 goog.provide('Blockly.Blocks.loops');  // Deprecated
 goog.provide('Blockly.Constants.Loops');
 
@@ -26,7 +26,7 @@ goog.require('Blockly.FieldLabel');
 goog.require('Blockly.FieldNumber');
 goog.require('Blockly.FieldVariable');
 goog.require('Blockly.Warning');
-*/
+
 
 /**
  * Unused constant for the common HSV hue for all blocks in this category.
@@ -40,39 +40,49 @@ Blockly.defineBlocksWithJsonArray(
   {
     "type": "controls_repeat_ext",
     "message0": "%{BKY_CONTROLS_REPEAT_TITLE}",
-    "args0": [{
-      "type": "input_value",
-      "name": "TIMES",
-      "check": "Number"
-    }],
+    "args0": 
+    [
+      {
+        "type": "input_value",
+        "name": "TIMES",
+        "check": "Number"
+      }
+    ],
     "message1": "%{BKY_CONTROLS_REPEAT_INPUT_DO} %1",
-    "args1": [{
-      "type": "input_statement",
-      "name": "DO"
-    }],
+    "args1": 
+    [
+      {
+        "type": "input_statement",
+        "name": "DO"
+      }
+    ],
     "previousStatement": null,
     "nextStatement": null,
-    "style": "loop_blocks",
-    "tooltip": "%{BKY_CONTROLS_REPEAT_TOOLTIP}",
-    "helpUrl": "%{BKY_CONTROLS_REPEAT_HELPURL}"
+    "style": "loop_blocks"
   },
   // Block for repeat n times (internal number).
   // The 'controls_repeat_ext' block is preferred as it is more flexible.
   {
     "type": "controls_repeat",
     "message0": "%{BKY_CONTROLS_REPEAT_TITLE}",
-    "args0": [{
+    "args0": 
+    [
+      {
       "type": "field_number",
       "name": "TIMES",
       "value": 10,
       "min": 0,
       "precision": 1
-    }],
+      }
+    ],
     "message1": "%{BKY_CONTROLS_REPEAT_INPUT_DO} %1",
-    "args1": [{
-      "type": "input_statement",
-      "name": "DO"
-    }],
+    "args1": 
+    [
+      {
+        "type": "input_statement",
+        "name": "DO"
+      }
+    ],
     "previousStatement": null,
     "nextStatement": null,
     "style": "loop_blocks",
@@ -83,11 +93,13 @@ Blockly.defineBlocksWithJsonArray(
   {
     "type": "controls_whileUntil",
     "message0": "%1 %2",
-    "args0": [
+    "args0": 
+    [
       {
         "type": "field_dropdown",
         "name": "MODE",
-        "options": [
+        "options": 
+        [
           ["%{BKY_CONTROLS_WHILEUNTIL_OPERATOR_WHILE}", "WHILE"],
           ["%{BKY_CONTROLS_WHILEUNTIL_OPERATOR_UNTIL}", "UNTIL"]
         ]
@@ -99,21 +111,24 @@ Blockly.defineBlocksWithJsonArray(
       }
     ],
     "message1": "%{BKY_CONTROLS_REPEAT_INPUT_DO} %1",
-    "args1": [{
-      "type": "input_statement",
-      "name": "DO"
-    }],
+    "args1": 
+    [
+      {
+        "type": "input_statement",
+        "name": "DO"
+      }
+    ],
     "previousStatement": null,
     "nextStatement": null,
     "style": "loop_blocks",
-    "helpUrl": "%{BKY_CONTROLS_WHILEUNTIL_HELPURL}",
     "extensions": ["controls_whileUntil_tooltip"]
   },
   // Block for 'for' loop.
   {
     "type": "controls_for",
     "message0": "%{BKY_CONTROLS_FOR_TITLE}",
-    "args0": [
+    "args0": 
+    [
       {
         "type": "field_variable",
         "name": "VAR",
@@ -139,16 +154,19 @@ Blockly.defineBlocksWithJsonArray(
       }
     ],
     "message1": "%{BKY_CONTROLS_REPEAT_INPUT_DO} %1",
-    "args1": [{
-      "type": "input_statement",
-      "name": "DO"
-    }],
+    "args1": 
+    [
+      {
+        "type": "input_statement",
+        "name": "DO"
+      }
+    ],
     "inputsInline": true,
     "previousStatement": null,
     "nextStatement": null,
     "style": "loop_blocks",
-    "helpUrl": "%{BKY_CONTROLS_FOR_HELPURL}",
-    "extensions": [
+    "extensions": 
+    [
       "contextMenu_newGetVariableBlock",
       "controls_for_tooltip"
     ]
@@ -157,7 +175,8 @@ Blockly.defineBlocksWithJsonArray(
   {
     "type": "controls_forEach",
     "message0": "%{BKY_CONTROLS_FOREACH_TITLE}",
-    "args0": [
+    "args0": 
+    [
       {
         "type": "field_variable",
         "name": "VAR",
@@ -170,15 +189,18 @@ Blockly.defineBlocksWithJsonArray(
       }
     ],
     "message1": "%{BKY_CONTROLS_REPEAT_INPUT_DO} %1",
-    "args1": [{
-      "type": "input_statement",
-      "name": "DO"
-    }],
+    "args1": 
+    [
+      {
+        "type": "input_statement",
+        "name": "DO"
+      }
+    ],
     "previousStatement": null,
     "nextStatement": null,
     "style": "loop_blocks",
-    "helpUrl": "%{BKY_CONTROLS_FOREACH_HELPURL}",
-    "extensions": [
+    "extensions": 
+    [
       "contextMenu_newGetVariableBlock",
       "controls_forEach_tooltip"
     ]
@@ -187,18 +209,22 @@ Blockly.defineBlocksWithJsonArray(
   {
     "type": "controls_flow_statements",
     "message0": "%1",
-    "args0": [{
-      "type": "field_dropdown",
-      "name": "FLOW",
-      "options": [
-        ["%{BKY_CONTROLS_FLOW_STATEMENTS_OPERATOR_BREAK}", "BREAK"],
-        ["%{BKY_CONTROLS_FLOW_STATEMENTS_OPERATOR_CONTINUE}", "CONTINUE"]
-      ]
-    }],
+    "args0": 
+    [
+      {
+        "type": "field_dropdown",
+        "name": "FLOW",
+        "options":
+        [
+          ["%{BKY_CONTROLS_FLOW_STATEMENTS_OPERATOR_BREAK}", "BREAK"],
+          ["%{BKY_CONTROLS_FLOW_STATEMENTS_OPERATOR_CONTINUE}", "CONTINUE"]
+        ]
+      }
+    ],
     "previousStatement": null,
     "style": "loop_blocks",
-    "helpUrl": "%{BKY_CONTROLS_FLOW_STATEMENTS_HELPURL}",
-    "extensions": [
+    "extensions": 
+    [
       "controls_flow_tooltip",
       "controls_flow_in_loop_check"
     ]

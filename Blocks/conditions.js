@@ -6,7 +6,6 @@
  */
 'use strict';
 
-/*
 goog.provide('Blockly.Blocks.logic');  // Deprecated
 goog.provide('Blockly.Constants.Logic');
 
@@ -15,7 +14,7 @@ goog.require('Blockly.Blocks');
 goog.require('Blockly.FieldDropdown');
 goog.require('Blockly.FieldLabel');
 goog.require('Blockly.Mutator');
-*/
+
 
 // Début de la définition des blocs en JSON
 Blockly.defineBlocksWithJsonArray(

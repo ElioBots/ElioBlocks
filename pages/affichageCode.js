@@ -10,8 +10,7 @@ function displayCode(code)
     output.value = code;
     output.focus();
     output.select();
-}
-  
+}  
 
 // Fonction de récupération du code
 function getCode()
