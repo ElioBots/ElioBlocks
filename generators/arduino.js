@@ -117,6 +117,8 @@
          Blockly.Arduino.variableDB_.reset();
      }
  
+
+     /*
      Blockly.Arduino.variableDB_.setVariableMap(workspace.getVariableMap());
      Blockly.Arduino.definitions_['variables'] = "";
  
@@ -131,6 +133,7 @@
          }
          Blockly.Arduino.definitions_['variables'] += allTypes[i] + ' ' + defvars.join(', ') + ';\n';
      }
+     */
  };
  
  /**
