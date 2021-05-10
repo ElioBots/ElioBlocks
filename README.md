@@ -10,6 +10,8 @@ Elio programing interface based on Google Blockly
     Par la suite, la structure html et les autres fichiers du dossier ont été refait selon la structure de la page "demo" du projet initial b
     **Blockly**.
 
+    Le fichier `affichageCode.js`, permettant l'affichage du code C++ des blocs, a été rendu fonctionnel grâce à <a herf="https://52.41.178.224/Junkbot-Projects/codebrick_blockly">ce projet</a> et notamment <a href="https://52.41.178.224/Junkbot-Projects/codebrick_blockly/blob/bbb0aec6726d36cafb06118039212c7dadc3bd0b/blockly/tests/generators/index.html">cette partie</a>
+
 <br/>
 
 - Dossier `Blocks`<br/>
