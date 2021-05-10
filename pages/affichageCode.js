@@ -3,11 +3,17 @@
  * @description : Ficher assurant les fonctions liées à la récupération du code issu du programme créé via les blocs
  */
 
-// CF "init.js" dans le dossier js du projet BlocklyDuino
-
+// Fonction de rendu du code
 function getCode()
 {
-    var codePeakPre = document.getElementById('content_code');
-    var generatedCode = Blockly.Arduino.workspaceToCode(workspace);
-    editor.setValue(generatedCode, 1);
+
+    var arduinoTextarea = document.getElementById('content_code');
+    arduinoTextarea.value = Blockly.Arduino.workspaceToCode('blockly-div');
+    arduinoTextarea.focus();
+   /*
+    var code = '\'use strict\';\n\n'
+    code += Blockly.Arduino.workspaceToCode();
+    setOutput(code);
+    */
+  
 }
