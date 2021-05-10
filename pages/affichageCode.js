@@ -20,7 +20,7 @@ function getCode()
     arduinoTextarea.value = Blockly.Arduino.workspaceToCode('blockly-div');
     arduinoTextarea.focus();
    */
-    var code = '\//Program C++\'\n\n'
+    var code = '\//Programme en C++\'\n\n'
     code += Blockly.Arduino.workspaceToCode();
     displayCode(code);
 }
