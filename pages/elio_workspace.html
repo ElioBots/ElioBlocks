@@ -10,8 +10,8 @@
     <script src="../ressources/blocks_compressed.js"></script>
     <script src="../ressources/javascript_compressed.js"></script>
     <script src="../Blocks/conditions.js"></script>
-    <script src="../Blocks/elio_blocks.js"></script>
     <script src="../Blocks/boucles.js"></script>
+    <script src="../Blocks/modules.js"></script>
     <script src="../generators/arduino.js"></script>
     <script src="../generators/blocks/conditions.js"></script>
     <script src="../msg/js/fr.js"></script>
@@ -27,7 +27,7 @@
     </div>
 
     
-    <div id="blockly-div" style=" height: 480px; width: 600px;"></div>
+    <div id="blockly-div" style=" height: 480px; width: 850px;"></div>
 
     <div class="button-div">
       <button class="button" onclick="getCode()">Voir mon code</button>
@@ -39,11 +39,6 @@
 
     <!-- Barre de sélection des blocks -->
     <xml xmlns="https://developers.google.com/blockly/xml" id="toolbox" style="display: none">
-        <category name="Architecture">
-          <block type="fonction"></block>
-          <block type="fonction_principale"></block>
-          <block type="zone_prog"></block>
-        </category>
         <category name="Conditions">
           <block type="controls_if"></block>  
           <block type="logic_compare"></block>
@@ -58,11 +53,11 @@
         </category>
         <category name="Boucles"></block>
           <block type="controls_whileUntil"></block>
+          
+          <!-- Isolement de cette possibilité, faisant bugger l'affichage
           <block type="controls_for"></block>
           <block type="controls_forEach"></block>
           <block type="controls_flow_statements"></block>
-          <!-- Isolement de cette possibilité, faisant bugger l'affichage
-          
           -->
         
         </category>
@@ -77,6 +72,8 @@
         <category name="Capteur de couleurs">
         </category>
         <category name="LEDs RGB">
+          <block type="def_aduino_leds"></block>
+          <block type="aduino_leds"></block>
         </category>
         <category name="Bip boup">
         </category>

@@ -34,9 +34,15 @@ Blockly.Msg["CONTROLS_IF_MSG_ELSE"] = "Sinon",
 // Version Française des blocs de boucle
 Blockly.Msg["CONTROLS_REPEAT_TITLE"] = "Tant que",
 Blockly.Msg["CONTROLS_REPEAT_INPUT_DO"] = "Faire",
-Blockly.Msg["CONTROLS_WHILEUNTIL_OPERATOR_WHILE"] = "Tant-que",
-Blockly.Msg["CONTROLS_WHILEUNTIL_OPERATOR_UNTIL"] = "Jusqu'à-ce-que",
+Blockly.Msg["CONTROLS_WHILEUNTIL_OPERATOR_WHILE"] = "Tant que",
+Blockly.Msg["CONTROLS_WHILEUNTIL_OPERATOR_UNTIL"] = "Jusqu'à ce que",
 Blockly.Msg["CONTROLS_FOR_TITLE"] = "Pour",
 Blockly.Msg["CONTROLS_FOREACH_TITLE"] = "Pour chaque",
 Blockly.Msg["CONTROLS_FLOW_STATEMENTS_OPERATOR_BREAK"] = "Stopper boucle",
 Blockly.Msg["CONTROLS_FLOW_STATEMENTS_OPERATOR_CONTINUE"] = "Continuer boucle"
+
+// Vesion Française des blocs modules
+Blockly.Msg["LEDS_DEFINE_TEXT"] = "Définir une",
+Blockly.Msg["LEDS_PLACEMENT_TEXT"] = "à l'emplacement",
+Blockly.Msg["LEDS_STATE_HIGH"] = "Allumer",
+Blockly.Msg["LEDS_STATE_LOW"] = "Eteindre"

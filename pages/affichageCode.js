@@ -15,11 +15,6 @@ function displayCode(code)
 // Fonction de récupération du code
 function getCode()
 {
-    /*
-    var arduinoTextarea = document.getElementById('content_code');
-    arduinoTextarea.value = Blockly.Arduino.workspaceToCode('blockly-div');
-    arduinoTextarea.focus();
-   */
     var code = '\//Programme en C++\'\n\n'
     code += Blockly.Arduino.workspaceToCode();
     displayCode(code);
