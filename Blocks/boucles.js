@@ -13,19 +13,6 @@
  * exception is end-of-line comments, which the scraper will remove.
  * @author fraser@google.com (Neil Fraser)
  */
-'use strict';
-
-
-goog.provide('Blockly.Blocks.loops');  // Deprecated
-goog.provide('Blockly.Constants.Loops');
-
-goog.require('Blockly');
-goog.require('Blockly.Blocks');
-goog.require('Blockly.FieldDropdown');
-goog.require('Blockly.FieldLabel');
-goog.require('Blockly.FieldNumber');
-goog.require('Blockly.FieldVariable');
-goog.require('Blockly.Warning');
 
 
 /**

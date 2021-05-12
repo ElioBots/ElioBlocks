@@ -6,82 +6,6 @@
 // Début de la définition des blocs en JSON
 Blockly.defineBlocksWithJsonArray(
 [  
-    // Définition du bloc de définition des leds de l'arduino
-    {
-        "type": "def_aduino_leds",
-        "message0": "%{BKY_LEDS_DEFINE_TEXT} LED %{BKY_LEDS_PLACEMENT_TEXT} : %1",
-        "args0": 
-        [
-          {
-            "type": "field_dropdown",
-            "name": "def_pin_led",
-            "options": 
-            [
-              [
-                "0",
-                "pin0"
-              ],
-              [
-                "1",
-                "pin1"
-              ],
-              [
-                "2",
-                "pin2"
-              ],
-              [
-                "3",
-                "pin3"
-              ],
-              [
-                "4",
-                "pin4"
-              ],
-              [
-                "5",
-                "pin5"
-              ],
-              [
-                "6",
-                "pin6"
-              ],
-              [
-                "7",
-                "pin7"
-              ],
-              [
-                "8",
-                "pin8"
-              ],
-              [
-                "9",
-                "pin9"
-              ],
-              [
-                "10",
-                "pin10"
-              ],
-              [
-                "11",
-                "pin11"
-              ],
-              [
-                "12",
-                "pin12"
-              ],
-              [
-                "13",
-                "pin13"
-              ]
-            ]
-          }
-        ],
-        "previousStatement": null,
-        "nextStatement": null,
-        "colour": 345,
-        "tooltip": "",
-        "helpUrl": ""
-    },
     // Définition du bloc d'allumage et d'extinction des leds de l'arduino
     {
         "type": "aduino_leds",
@@ -90,7 +14,7 @@ Blockly.defineBlocksWithJsonArray(
         [
           {
             "type": "field_dropdown",
-            "name": "initStateChoise",
+            "name": "stateChoise",
             "options": 
             [
               [
@@ -110,59 +34,59 @@ Blockly.defineBlocksWithJsonArray(
             [
               [
                 "0",
-                "pin0"
+                "0"
               ],
               [
                 "1",
-                "pin1"
+                "1"
               ],
               [
                 "2",
-                "pin2"
+                "2"
               ],
               [
                 "3",
-                "pin3"
+                "3"
               ],
               [
                 "4",
-                "pin4"
+                "4"
               ],
               [
                 "5",
-                "pin5"
+                "5"
               ],
               [
                 "6",
-                "pin6"
+                "6"
               ],
               [
                 "7",
-                "pin7"
+                "7"
               ],
               [
                 "8",
-                "pin8"
+                "8"
               ],
               [
                 "9",
-                "pin9"
+                "9"
               ],
               [
                 "10",
-                "pin10"
+                "10"
               ],
               [
                 "11",
-                "pin11"
+                "11"
               ],
               [
                 "12",
-                "pin12"
+                "12"
               ],
               [
                 "13",
-                "pin13"
+                "13"
               ]
             ]
           }

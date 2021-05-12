@@ -6,7 +6,7 @@
 'use strict';
 
 
-goog.provide('Blockly.Arduino.logic');
+goog.provide('Blockly.Arduino.conditions');
  
 goog.require('Blockly.Arduino');
 
