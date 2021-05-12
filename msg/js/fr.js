@@ -42,7 +42,29 @@ Blockly.Msg["CONTROLS_FLOW_STATEMENTS_OPERATOR_BREAK"] = "Stopper boucle",
 Blockly.Msg["CONTROLS_FLOW_STATEMENTS_OPERATOR_CONTINUE"] = "Continuer boucle"
 
 // Vesion Française des blocs modules
-Blockly.Msg["LEDS_DEFINE_TEXT"] = "Définir une",
 Blockly.Msg["LEDS_PLACEMENT_TEXT"] = "à l'emplacement",
 Blockly.Msg["LEDS_STATE_HIGH"] = "Allumer",
-Blockly.Msg["LEDS_STATE_LOW"] = "Eteindre"
+Blockly.Msg["LEDS_STATE_LOW"] = "Eteindre",
+Blockly.Msg["ROBOT_MOVE_TEXT"] = "Déplacer le robot vers",
+Blockly.Msg["ROBOT_SPEED_TEXT"] = "à vitesse",
+Blockly.Msg["ROBOT_MOVE_FORWARD"] = "l'avant",
+Blockly.Msg["ROBOT_MOVE_BACKWARD"] = "l'arrière",
+Blockly.Msg["ROBOT_SPEED_SLOW"] = "lente",
+Blockly.Msg["ROBOT_SPEED_MEDIUM"] = "moyenne",
+Blockly.Msg["ROBOT_SPEED_FAST"] = "rapide",
+Blockly.Msg["ROBOT_TURN_RIGHT"] = "la droite",
+Blockly.Msg["ROBOT_TURN_TEXT"] = "Tourner le robot vers",
+Blockly.Msg["ROBOT_TURN_LEFT"] = "la gauche",
+Blockly.Msg["ROBOT_TURN_BACKWARD"] = "l'arrière",
+Blockly.Msg["ROBOT_ROTA_TEXT"] = "Faire une rotation du robot de",
+Blockly.Msg["ROBOT_STOP"] = "Arrêter le robot",
+Blockly.Msg["TO_BE_OBSTACLES_OR_NOT_OBSTACLES"] = "Obstacle",
+Blockly.Msg["ROBOT_SENSOR_FORWARD"] = "devant",
+Blockly.Msg["ROBOT_SENSOR_BACKWARD"] = "derrière",
+Blockly.Msg["ROBOT_SENSOR_RIGHT"] = "à droite",
+Blockly.Msg["ROBOT_SENSOR_LEFT"] = "à gauche",
+Blockly.Msg["TO_BE_LINE_OR_NOT_LINE"] = "Ligne ?",
+Blockly.Msg["ROBOT_FOLLOW_LINE_TEXT"] = "Suivre la ligne pendant",
+Blockly.Msg["ROBOT_FOLLOW_LINE_SECOUNDS_TEXT"] = "seconde(s)",
+Blockly.Msg["ROBOT_FOLLOW_LINE_SPEED_TEXT"] = "à une vitesse"
+
