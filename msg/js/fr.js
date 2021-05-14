@@ -43,6 +43,7 @@ Blockly.Msg["CONTROLS_FLOW_STATEMENTS_OPERATOR_CONTINUE"] = "Continuer boucle"
 
 // Vesion Française des blocs modules
 Blockly.Msg["LEDS_PLACEMENT_TEXT"] = "à l'emplacement",
+Blockly.Msg["LEDS_RGB_COLOUR_TEXT"] = "avec la couleur",
 Blockly.Msg["LEDS_STATE_HIGH"] = "Allumer",
 Blockly.Msg["LEDS_STATE_LOW"] = "Eteindre",
 Blockly.Msg["ROBOT_MOVE_TEXT"] = "Déplacer le robot vers",
@@ -103,4 +104,7 @@ Blockly.Msg["MATH_ONLIST_OPERATOR_STD_DEV"] = "l'écart type",
 Blockly.Msg["MATH_ONLIST_OPERATOR_RANDOM"] = "les éléments aléatoires",
 Blockly.Msg["MATH_MODULO_TITLE"] = "les éléments aléatoires",
 Blockly.Msg["MATH_MODULO_SYMBOL"] = "%",
-Blockly.Msg["MATH_MODULO_TITLE"] = "les éléments aléatoires"
+Blockly.Msg["MATH_MODULO_TITLE"] = "les éléments aléatoires",
+
+// Version Française des blocs de déclaration des variables
+Blockly.Msg["NEW_VARIABLE"] = "Créer une nouvelle variable"
