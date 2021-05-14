@@ -175,7 +175,8 @@ Blockly.defineBlocksWithJsonArray(
   {
     "type": "math_number_property",
     "message0": "%1 %2",
-    "args0": [
+    "args0": 
+    [
       {
         "type": "input_value",
         "name": "NUMBER_TO_CHECK",
@@ -205,7 +206,7 @@ Blockly.defineBlocksWithJsonArray(
   // Block for adding to a variable in place.
   {
     "type": "math_change",
-    "message0": "%{BKY_MATH_CHANGE_TITLE}",
+    "message0": "%1",
     "args0": 
     [
       {
@@ -256,7 +257,7 @@ Blockly.defineBlocksWithJsonArray(
   // etc.  Some functions also work on text (min, max, mode, median).
   {
     "type": "math_on_list",
-    "message0": "%{BKY_MATH_ONLIST_OPERATOR_TEXT} %1 %2",
+    "message0": "%{BKY_MATH_ONLIST_OPERATOR_TEXT} %1 %{BKY_MATH_ONLIST_LIST_TEXT} %2",
     "args0": 
     [
       {
@@ -340,7 +341,7 @@ Blockly.defineBlocksWithJsonArray(
   // Block for random integer between [X] and [Y].
   {
     "type": "math_random_int",
-    "message0": "%{BKY_MATH_RANDOM_INT_TITLE}",
+    "message0": "%{BKY_MATH_RANDOM_INT_TITLE} %1 %{BKY_MATH_RANDOM_INT_TITLE_AND} %2",
     "args0": [
       {
         "type": "input_value",
@@ -358,16 +359,6 @@ Blockly.defineBlocksWithJsonArray(
     "style": "math_blocks",
     "tooltip": "%{BKY_MATH_RANDOM_INT_TOOLTIP}",
     "helpUrl": "%{BKY_MATH_RANDOM_INT_HELPURL}"
-  },
-
-  // Block for random integer between [X] and [Y].
-  {
-    "type": "math_random_float",
-    "message0": "%{BKY_MATH_RANDOM_FLOAT_TITLE_RANDOM}",
-    "output": "Number",
-    "style": "math_blocks",
-    "tooltip": "%{BKY_MATH_RANDOM_FLOAT_TOOLTIP}",
-    "helpUrl": "%{BKY_MATH_RANDOM_FLOAT_HELPURL}"
   },
 
   // Block for calculating atan2 of [X] and [Y].

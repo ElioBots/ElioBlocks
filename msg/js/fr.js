@@ -94,6 +94,7 @@ Blockly.Msg["MATH_ROUND_OPERATOR_ROUND"] = "arrondir le nombre",
 Blockly.Msg["MATH_ROUND_OPERATOR_ROUNDUP"] = "arrondir au supérieur le nombre",
 Blockly.Msg["MATH_ROUND_OPERATOR_ROUNDDOWN"] = "arrondir à l'inférieur le nombre",
 Blockly.Msg["MATH_ONLIST_OPERATOR_TEXT"] = "Trouver",
+Blockly.Msg["MATH_ONLIST_LIST_TEXT"] = "de la liste",
 Blockly.Msg["MATH_ONLIST_OPERATOR_SUM"] = "la somme",
 Blockly.Msg["MATH_ONLIST_OPERATOR_MIN"] = "le minimum",
 Blockly.Msg["MATH_ONLIST_OPERATOR_MAX"] = "le maximum",
@@ -105,6 +106,8 @@ Blockly.Msg["MATH_ONLIST_OPERATOR_RANDOM"] = "les éléments aléatoires",
 Blockly.Msg["MATH_MODULO_TITLE"] = "les éléments aléatoires",
 Blockly.Msg["MATH_MODULO_SYMBOL"] = "%",
 Blockly.Msg["MATH_MODULO_TITLE"] = "les éléments aléatoires",
+Blockly.Msg["MATH_RANDOM_INT_TITLE"] = "est un entier aléatoire entre",
+Blockly.Msg["MATH_RANDOM_INT_TITLE_AND"] = "et",
 
 // Version Française des blocs de déclaration des variables
 Blockly.Msg["NEW_VARIABLE"] = "Créer une nouvelle variable"
