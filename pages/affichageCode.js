@@ -15,7 +15,7 @@ function displayCode(code)
 // Fonction de récupération du code
 function getCode()
 {
-    var code = '\//Programme en C++\'\n\n'
+    var code = '//Programme en C++\n\n#include <Arduino.h>\n#include <Wire.h>\n#include <Adafruit_NeoPixel.h>\n\n'
     code += Blockly.Arduino.workspaceToCode();
     displayCode(code);
 }

@@ -130,7 +130,51 @@ Blockly.defineBlocksWithJsonArray(
     "colour": 345,
     "tooltip": "",
     "helpUrl": ""
-},
+  },
+
+  // Bloc du bouton du robot
+  {
+    "type": "buton",
+    "message0": "%{BKY_BUTON_STATE_TEXT} %1 %2",
+    "args0": 
+    [
+      {
+        "type": "field_dropdown",
+        "name": "buton_to_be_or_not_to_be_state_listening",
+        "options": 
+        [
+          [
+            "%{BKY_BUTON_IS_STATE}",
+            "=="
+          ],
+          [
+            "%{BKY_BUTON_NOT_STATE}",
+            "!="
+          ]
+        ]
+      },
+      {
+        "type": "field_dropdown",
+        "name": "buton_state_listening",
+        "options": 
+        [
+          [
+            "%{BKY_BUTON_STATE_TRUE}",
+            "LOW"
+          ],
+          [
+            "%{BKY_BUTON_STATE_FALSE}",
+            "HIGH"
+          ]
+        ]
+      }
+    ],
+    "output": null,
+    "colour": 285,
+    "tooltip": "",
+    "helpUrl": ""
+  },
+
   // Définition du bloc gérant les déplacements avant/arrière du robot
   {
     "type": "move",
@@ -178,7 +222,7 @@ Blockly.defineBlocksWithJsonArray(
     "tooltip": "",
     "helpUrl": ""
   },
-  // Bloc permetant la rotation du robot
+  // Bloc permetant au robot de tourner
   {
     "type": "turn",
     "message0": "%{BKY_ROBOT_TURN_TEXT} %1",
@@ -241,9 +285,25 @@ Blockly.defineBlocksWithJsonArray(
   // Bloc permettanr la lecture d'obstacles
   {
     "type": "obstacle",
-    "message0": "%{BKY_TO_BE_OBSTACLES_OR_NOT_OBSTACLES} %1 ?",
+    "message0": "%{BKY_TO_BE_OBSTACLES_OR_NOT_OBSTACLES} %1 %2",
     "args0": 
     [
+      {
+        "type": "field_dropdown",
+        "name": "obstacle_to_be_or_not_to_be",
+        "options": 
+        [
+          [
+            "%{BKY_IS_OBSTACLE}",
+            "<"
+  
+          ],
+          [
+            "%{BKY_NOT_OBSTACLE}",
+            ">="
+          ]
+        ]
+      },
       {
         "type": "field_dropdown",
         "name": "sensorChoise",
@@ -251,19 +311,19 @@ Blockly.defineBlocksWithJsonArray(
         [
           [
             "%{BKY_ROBOT_SENSOR_FORWARD}",
-            "1"
+            "0"
           ],
           [
             "%{BKY_ROBOT_SENSOR_BACKWARD}",
-            "2"
+            "1"
           ],
           [
             "%{BKY_ROBOT_SENSOR_RIGHT}",
-            "3"
+            "2"
           ],
           [
             "%{BKY_ROBOT_SENSOR_LEFT}",
-            "4"
+            "3"
           ]
         ]
       },
