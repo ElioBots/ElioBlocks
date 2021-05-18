@@ -4,20 +4,30 @@
   <head>
     <title>Elio Workspace</title>
     <link rel="stylesheet" href="elio_workspace_style.css">
-    <script src="../packages/goog/base.js"></script>
+    <script src="../closure/goog/base.js"></script>
     <script src="../ressources/arduino_compressed.js"></script>
     <script src="../ressources/blockly_compressed.js"></script>
     <script src="../ressources/blocks_compressed.js"></script>
-    <script src="../ressources/javascript_compressed.js"></script>
-    <script src="../Blocks/conditions.js"></script>
-    <script src="../Blocks/boucles.js"></script>
-    <script src="../Blocks/math.js"></script>
-    <script src="../Blocks/modules.js"></script>
-    <script src="../Blocks/variables.js"></script>
-    <script src="../Blocks/variables_dynamic.js"></script>
+    <script src="../javascript_compressed.js"></script>
+    <script src="../blockly_compressed.js.map"></script>
+    <script src="../blocks/colour.js"></script>
+    <script src="../blocks/lists.js"></script>
+    <script src="../blocks/logic.js"></script>
+    <script src="../blocks/loops.js"></script>
+    <script src="../blocks/math.js"></script>
+    <script src="../blocks/procedures.js"></script>
+    <script src="../blocks/text.js"></script>
+    <script src="../blocks/variables.js"></script>
+    <script src="../blocks/variables_dynamic.js"></script>
+    <script src="../blocks/ElioBlocks/modules.js"></script>
     <script src="../generators/arduino.js"></script>
-    <script src="../generators/blocks/conditions.js"></script>
-    <script src="../generators/blocks/boucles.js"></script>
+    <script src="../generators/blocks/colour.js"></script>
+    <script src="../generators/blocks/lists.js"></script>
+    <script src="../generators/blocks/logic.js"></script>
+    <script src="../generators/blocks/loops.js"></script>
+    <script src="../generators/blocks/math.js"></script>
+    <script src="../generators/blocks/procedures.js"></script>
+    <script src="../generators/blocks/text.js"></script>
     <script src="../generators/blocks/modules.js"></script>
     <script src="../msg/js/fr.js"></script>
   </head>
@@ -51,20 +61,13 @@
           <block type="logic_boolean"></block>
           <block type="logic_null"></block>
           <block type="logic_ternary"></block>
-          
-          <!-- Isolement de cette possibilité, faisant bugger l'affichage
           <block type="logic_negate"></block>
-           -->
         </category>
         <category name="Boucles"></block>
           <block type="controls_whileUntil"></block>
-          
-          <!-- Isolement de cette possibilité, faisant bugger l'affichage
+          <block type="controls_flow_statements"></block>
           <block type="controls_for"></block>
           <block type="controls_forEach"></block>
-          <block type="controls_flow_statements"></block>
-          -->
-        
         </category>
         <category name="Maths">
           <block type="math_number"></block>
@@ -74,13 +77,11 @@
           <block type="math_number_property"></block>
           <block type="math_round"></block>
           <block type="math_on_list"></block>      
-          <!-- Bug de l'affichage encore >:c
           <block type="math_random_int"></block> 
           <block type="math_change"></block>
           <block type="math_modulo"></block>
           <block type="math_constrain"></block> 
-          <block type="math_atan2"></block>
-          -->        
+          <block type="math_atan2"></block>      
         </category>
         <category name="Mouvement">
           <block type="move"></block>

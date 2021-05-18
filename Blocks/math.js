@@ -32,22 +32,20 @@ goog.require('Blockly.FieldVariable');
  */
 Blockly.Constants.Math.HUE = 230;
 
-Blockly.defineBlocksWithJsonArray(
-[  // BEGIN JSON EXTRACT
+Blockly.defineBlocksWithJsonArray([  // BEGIN JSON EXTRACT
   // Block for numeric value.
   {
     "type": "math_number",
     "message0": "%1",
-    "args0": 
-    [
-      {
+    "args0": [{
       "type": "field_number",
       "name": "NUM",
       "value": 0
-      }
-    ],
+    }],
     "output": "Number",
+    "helpUrl": "%{BKY_MATH_NUMBER_HELPURL}",
     "style": "math_blocks",
+    "tooltip": "%{BKY_MATH_NUMBER_TOOLTIP}",
     "extensions": ["parent_tooltip_when_inline"]
   },
 
@@ -55,8 +53,7 @@ Blockly.defineBlocksWithJsonArray(
   {
     "type": "math_arithmetic",
     "message0": "%1 %2 %3",
-    "args0": 
-    [
+    "args0": [
       {
         "type": "input_value",
         "name": "A",
@@ -65,8 +62,7 @@ Blockly.defineBlocksWithJsonArray(
       {
         "type": "field_dropdown",
         "name": "OP",
-        "options": 
-        [
+        "options": [
           ["%{BKY_MATH_ADDITION_SYMBOL}", "ADD"],
           ["%{BKY_MATH_SUBTRACTION_SYMBOL}", "MINUS"],
           ["%{BKY_MATH_MULTIPLICATION_SYMBOL}", "MULTIPLY"],
@@ -83,6 +79,7 @@ Blockly.defineBlocksWithJsonArray(
     "inputsInline": true,
     "output": "Number",
     "style": "math_blocks",
+    "helpUrl": "%{BKY_MATH_ARITHMETIC_HELPURL}",
     "extensions": ["math_op_tooltip"]
   },
 
@@ -90,13 +87,11 @@ Blockly.defineBlocksWithJsonArray(
   {
     "type": "math_single",
     "message0": "%1 %2",
-    "args0": 
-    [
+    "args0": [
       {
         "type": "field_dropdown",
         "name": "OP",
-        "options": 
-        [
+        "options": [
           ["%{BKY_MATH_SINGLE_OP_ROOT}", 'ROOT'],
           ["%{BKY_MATH_SINGLE_OP_ABSOLUTE}", 'ABS'],
           ['-', 'NEG'],
@@ -114,6 +109,7 @@ Blockly.defineBlocksWithJsonArray(
     ],
     "output": "Number",
     "style": "math_blocks",
+    "helpUrl": "%{BKY_MATH_SINGLE_HELPURL}",
     "extensions": ["math_op_tooltip"]
   },
 
@@ -121,8 +117,7 @@ Blockly.defineBlocksWithJsonArray(
   {
     "type": "math_trig",
     "message0": "%1 %2",
-    "args0": 
-    [
+    "args0": [
       {
         "type": "field_dropdown",
         "name": "OP",
@@ -143,6 +138,7 @@ Blockly.defineBlocksWithJsonArray(
     ],
     "output": "Number",
     "style": "math_blocks",
+    "helpUrl": "%{BKY_MATH_TRIG_HELPURL}",
     "extensions": ["math_op_tooltip"]
   },
 
@@ -150,13 +146,11 @@ Blockly.defineBlocksWithJsonArray(
   {
     "type": "math_constant",
     "message0": "%1",
-    "args0": 
-    [
+    "args0": [
       {
         "type": "field_dropdown",
         "name": "CONSTANT",
-        "options": 
-        [
+        "options": [
           ["\u03c0", "PI"],
           ["e", "E"],
           ["\u03c6", "GOLDEN_RATIO"],
@@ -168,6 +162,8 @@ Blockly.defineBlocksWithJsonArray(
     ],
     "output": "Number",
     "style": "math_blocks",
+    "tooltip": "%{BKY_MATH_CONSTANT_TOOLTIP}",
+    "helpUrl": "%{BKY_MATH_CONSTANT_HELPURL}"
   },
 
   // Block for checking if a number is even, odd, prime, whole, positive,
@@ -175,8 +171,7 @@ Blockly.defineBlocksWithJsonArray(
   {
     "type": "math_number_property",
     "message0": "%1 %2",
-    "args0": 
-    [
+    "args0": [
       {
         "type": "input_value",
         "name": "NUMBER_TO_CHECK",
@@ -185,8 +180,7 @@ Blockly.defineBlocksWithJsonArray(
       {
         "type": "field_dropdown",
         "name": "PROPERTY",
-        "options": 
-        [
+        "options": [
           ["%{BKY_MATH_IS_EVEN}", "EVEN"],
           ["%{BKY_MATH_IS_ODD}", "ODD"],
           ["%{BKY_MATH_IS_PRIME}", "PRIME"],
@@ -200,15 +194,15 @@ Blockly.defineBlocksWithJsonArray(
     "inputsInline": true,
     "output": "Boolean",
     "style": "math_blocks",
+    "tooltip": "%{BKY_MATH_IS_TOOLTIP}",
     "mutator": "math_is_divisibleby_mutator"
   },
 
   // Block for adding to a variable in place.
   {
     "type": "math_change",
-    "message0": "%1",
-    "args0": 
-    [
+    "message0": "%{BKY_MATH_CHANGE_TITLE}",
+    "args0": [
       {
         "type": "field_variable",
         "name": "VAR",
@@ -231,13 +225,11 @@ Blockly.defineBlocksWithJsonArray(
   {
     "type": "math_round",
     "message0": "%1 %2",
-    "args0": 
-    [
+    "args0": [
       {
         "type": "field_dropdown",
         "name": "OP",
-        "options": 
-        [
+        "options": [
           ["%{BKY_MATH_ROUND_OPERATOR_ROUND}", "ROUND"],
           ["%{BKY_MATH_ROUND_OPERATOR_ROUNDUP}", "ROUNDUP"],
           ["%{BKY_MATH_ROUND_OPERATOR_ROUNDDOWN}", "ROUNDDOWN"]
@@ -251,20 +243,20 @@ Blockly.defineBlocksWithJsonArray(
     ],
     "output": "Number",
     "style": "math_blocks",
+    "helpUrl": "%{BKY_MATH_ROUND_HELPURL}",
+    "tooltip": "%{BKY_MATH_ROUND_TOOLTIP}"
   },
 
   // Block for evaluating a list of numbers to return sum, average, min, max,
   // etc.  Some functions also work on text (min, max, mode, median).
   {
     "type": "math_on_list",
-    "message0": "%{BKY_MATH_ONLIST_OPERATOR_TEXT} %1 %{BKY_MATH_ONLIST_LIST_TEXT} %2",
-    "args0": 
-    [
+    "message0": "%1 %2",
+    "args0": [
       {
         "type": "field_dropdown",
         "name": "OP",
-        "options": 
-        [
+        "options": [
           ["%{BKY_MATH_ONLIST_OPERATOR_SUM}", "SUM"],
           ["%{BKY_MATH_ONLIST_OPERATOR_MIN}", "MIN"],
           ["%{BKY_MATH_ONLIST_OPERATOR_MAX}", "MAX"],
@@ -283,6 +275,7 @@ Blockly.defineBlocksWithJsonArray(
     ],
     "output": "Number",
     "style": "math_blocks",
+    "helpUrl": "%{BKY_MATH_ONLIST_HELPURL}",
     "mutator": "math_modes_of_list_mutator",
     "extensions": ["math_op_tooltip"]
   },
@@ -290,9 +283,8 @@ Blockly.defineBlocksWithJsonArray(
   // Block for remainder of a division.
   {
     "type": "math_modulo",
-    "message0": "%1 %{BKY_MATH_MODULO_SYMBOL} %2",
-    "args0": 
-    [
+    "message0": "%{BKY_MATH_MODULO_TITLE}",
+    "args0": [
       {
         "type": "input_value",
         "name": "DIVIDEND",
@@ -315,8 +307,7 @@ Blockly.defineBlocksWithJsonArray(
   {
     "type": "math_constrain",
     "message0": "%{BKY_MATH_CONSTRAIN_TITLE}",
-    "args0": 
-    [
+    "args0": [
       {
         "type": "input_value",
         "name": "VALUE",
@@ -336,12 +327,14 @@ Blockly.defineBlocksWithJsonArray(
     "inputsInline": true,
     "output": "Number",
     "style": "math_blocks",
+    "tooltip": "%{BKY_MATH_CONSTRAIN_TOOLTIP}",
+    "helpUrl": "%{BKY_MATH_CONSTRAIN_HELPURL}"
   },
 
   // Block for random integer between [X] and [Y].
   {
     "type": "math_random_int",
-    "message0": "%{BKY_MATH_RANDOM_INT_TITLE} %1 %{BKY_MATH_RANDOM_INT_TITLE_AND} %2",
+    "message0": "%{BKY_MATH_RANDOM_INT_TITLE}",
     "args0": [
       {
         "type": "input_value",
@@ -359,6 +352,16 @@ Blockly.defineBlocksWithJsonArray(
     "style": "math_blocks",
     "tooltip": "%{BKY_MATH_RANDOM_INT_TOOLTIP}",
     "helpUrl": "%{BKY_MATH_RANDOM_INT_HELPURL}"
+  },
+
+  // Block for random integer between [X] and [Y].
+  {
+    "type": "math_random_float",
+    "message0": "%{BKY_MATH_RANDOM_FLOAT_TITLE_RANDOM}",
+    "output": "Number",
+    "style": "math_blocks",
+    "tooltip": "%{BKY_MATH_RANDOM_FLOAT_TOOLTIP}",
+    "helpUrl": "%{BKY_MATH_RANDOM_FLOAT_HELPURL}"
   },
 
   // Block for calculating atan2 of [X] and [Y].

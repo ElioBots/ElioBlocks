@@ -1,6 +1,9 @@
 # ElioBlocks
 Elio programing interface based on Google Blockly 
 
+# Structure initiale du projet
+La structure actuelle du projet tire directement sa source du projet blockly initial de google
+
 # Inspiration d'autres projets :
 - Dossier `pages` et ses éléments<br/>
     Ce dossier contient l'affichage de l'interface.
@@ -14,7 +17,7 @@ Elio programing interface based on Google Blockly
 
 <br/>
 
-- Dossier `Blocks`<br/>
+- Dossier `blocks`<br/>
     Ce dossier contient la définition des blocs utilisés dans le projet.
 
     L'intégralité de son contenu est tiré et inspiré du projet **Blockly**, les blocs de base déjà fonctionnels ont été réutilisés pour ce projet dans un soucis de gain de temps.
@@ -38,4 +41,5 @@ Elio programing interface based on Google Blockly
 - Dossier `ressourses` <br/>
     Ce dossier contient des éléments indispensables pour le bon fonctionnement du projet. Ils sont directement tirés du projet initial **Blokly**.
 
-
+- Autres dossiers
+    Les dossiers non mentionnés sont directement issu du projet blockly
