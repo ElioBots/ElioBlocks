@@ -57,12 +57,24 @@ Blockly.Arduino['obstacle'] = function (block)
     var order = (operator == '<' || operator == '>=') ?
             Blockly.Arduino.ORDER_EQUALITY : Blockly.Arduino.ORDER_RELATIONAL;
     Blockly.Arduino.definitions_['define_obstacles_sensor'] = 'int sensorValue[3];\nint obstacleCount = 4;\nADS1015 obstacleSensor;\n';
-    Blockly.Arduino.setups_['setup_input_buton'] = 'if(obstacleSensor.begin(0x48) == false)\n  {\n    Serial.println("Osbtacle sensor not found. Check wiring.");\n    while(1)\n       ;\n  }\n  obstacleSensor.setGain(ADS1015_CONFIG_PGA_16);\n  pinMode(osbtacleCmdPin, OUTPUT);\n  digitalWrite(osbtacleCmdPin, HIGH);';
+    Blockly.Arduino.setups_['setup_obstacles_sensor'] = 'if(obstacleSensor.begin(0x48) == false)\n  {\n    Serial.println("Osbtacle sensor not found. Check wiring.");\n    while(1)\n       ;\n  }\n  obstacleSensor.setGain(ADS1015_CONFIG_PGA_16);\n  pinMode(osbtacleCmdPin, OUTPUT);\n  digitalWrite(osbtacleCmdPin, HIGH);';
     var argument = 'obstacleSensor.getSingleEnded('+ position +')';
     var condition = '5';
     var code = argument + ' ' + operator + ' ' + condition ;
     return [code, order];
 };
 
-
+// Définition du code du bloc bouton
+Blockly.Arduino['line'] = function (block) 
+{
+    var operator = block.getFieldValue('line_to_be_or_not_to_be');
+    var order = (operator == '==' || operator == '!=') ?
+            Blockly.Arduino.ORDER_EQUALITY : Blockly.Arduino.ORDER_RELATIONAL;
+    var state = block.getFieldValue('line_present_or_missing');
+    Blockly.Arduino.definitions_['define_line_sensor'] = 'int lineCount = 4;\nADS1015 lineSensor;\n';
+    Blockly.Arduino.setups_['setup_line_sensor'] = 'if(lineSensor.begin(0x49) == false)\n  {\n    Serial.println("Line sensor not found. Check wiring.");\n    while (1)\n      ;\n  }\n  pinMode(lineCmdPin, OUTPUT);\n  digitalWrite(lineCmdPin, HIGH);';
+    var argument = 'digitalRead(lineCmdPin)';
+    var code = argument + ' ' + operator + ' ' + state ;
+    return [code, order];
+};
 

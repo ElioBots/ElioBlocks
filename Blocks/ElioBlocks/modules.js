@@ -336,7 +336,42 @@ Blockly.defineBlocksWithJsonArray(
   // Bloc permettant la lecture de ligne
   {
     "type": "line",
-    "message0": "%{BKY_TO_BE_LINE_OR_NOT_LINE}",
+    "message0": "%{BKY_TO_BE_LINE_OR_NOT_LINE} %1 %2",
+    "args0": 
+    [
+      {
+        "type": "field_dropdown",
+        "name": "line_to_be_or_not_to_be",
+        "options": 
+        [
+          [
+            "%{BKY_BE_LINE}",
+            "=="
+  
+          ],
+          [
+            "%{BKY_NOT_LINE}",
+            "!="
+          ]
+        ]
+      },
+      {
+        "type": "field_dropdown",
+        "name": "line_present_or_missing",
+        "options": 
+        [
+          [
+            "%{BKY_LINE_IS_HERE}",
+            "LOW"
+  
+          ],
+          [
+            "%{BKY_LINE_IS_MISSING}",
+            "HIGH"
+          ]
+        ]
+      }
+    ],
     "output": null,
     "colour": 60,
     "tooltip": "",
