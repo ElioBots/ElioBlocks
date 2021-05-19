@@ -39,10 +39,10 @@ Blockly.Arduino['aduino_rgb_leds'] = function (block)
 // Définition du code du bloc bouton
 Blockly.Arduino['buton'] = function (block) 
 {
-    var operator = block.getFieldValue('buton_to_be_or_not_to_be_state_listening');
+    var operator = "=="
     var order = (operator == '==' || operator == '!=') ?
             Blockly.Arduino.ORDER_EQUALITY : Blockly.Arduino.ORDER_RELATIONAL;
-    var state = block.getFieldValue('buton_state_listening');
+    var state = "LOW"
     Blockly.Arduino.setups_['setup_input_buton'] = 'pinMode(4, INPUT);';
     var argument = 'digitalRead(4)';
     var code = argument + ' ' + operator + ' ' + state ;
@@ -52,7 +52,7 @@ Blockly.Arduino['buton'] = function (block)
 // Définition du code du bloc obstacle
 Blockly.Arduino['obstacle'] = function (block) 
 {
-    var operator = block.getFieldValue('obstacle_to_be_or_not_to_be');
+    var operator = "<"
     var position = block.getFieldValue('sensorChoise');
     var order = (operator == '<' || operator == '>=') ?
             Blockly.Arduino.ORDER_EQUALITY : Blockly.Arduino.ORDER_RELATIONAL;
@@ -67,10 +67,10 @@ Blockly.Arduino['obstacle'] = function (block)
 // Définition du code du bloc ligne
 Blockly.Arduino['line'] = function (block) 
 {
-    var operator = block.getFieldValue('line_to_be_or_not_to_be');
+    var operator = "=="
     var order = (operator == '==' || operator == '!=') ?
             Blockly.Arduino.ORDER_EQUALITY : Blockly.Arduino.ORDER_RELATIONAL;
-    var state = block.getFieldValue('line_present_or_missing');
+    var state = "LOW"
     Blockly.Arduino.definitions_['define_line_sensor'] = 'int lineCount = 4;\nADS1015 lineSensor;\n';
     Blockly.Arduino.setups_['setup_line_sensor'] = 'if(lineSensor.begin(0x49) == false)\n  {\n    Serial.println("Line sensor not found. Check wiring.");\n    while (1)\n      ;\n  }\n  pinMode(33, OUTPUT);\n  digitalWrite(33, HIGH);';
     var argument = 'digitalRead(33)';
@@ -84,7 +84,7 @@ Blockly.Arduino['move'] = function (block)
     var direction = block.getFieldValue('directionChoise');
     var speed = block.getFieldValue('speedChoise');
     Blockly.Arduino.definitions_['define_motors'] = 'MotorDriver motorA = MotorDriver(1, 14, 12);\nMotorDriver motorB = MotorDriver(2, 15, 13);';
-    var code = 'led_rgb.setPixelColor(0, led_rgb.Color(0, 0, 0));\nled_rgb.show();\n';
+    var code = '';
 
     if(direction == 'backward')
     {
@@ -129,6 +129,35 @@ Blockly.Arduino['move'] = function (block)
         }
     }
 
+    return code;
+};
+
+// Définition du code du bloc pour tourner
+Blockly.Arduino['turn'] = function (block) 
+{
+    var direction = block.getFieldValue('turnChoise');
+    Blockly.Arduino.definitions_['define_motors'] = 'MotorDriver motorA = MotorDriver(1, 14, 12);\nMotorDriver motorB = MotorDriver(2, 15, 13);';
+    var code = 'led_rgb.setPixelColor(0, led_rgb.Color(0, 0, 0));\nled_rgb.show();\n';
+
+    switch(direction)
+        {
+            case 'right' :
+                code = 'motorA.forward();\nmotorB.backward();\ndelay(100);\nmotorA.stop();\nmotorB.stop();\n';
+                break;
+
+            case 'left' :
+                code = 'motorA.backward();\nmotorB.forward();\ndelay(100);\nmotorA.stop();\nmotorB.stop();\n';
+                break;
+
+            case 'backward' :
+                code = 'motorA.forward();\nmotorB.backward();\ndelay(200);\nmotorA.stop();\nmotorB.stop();\n';
+                break;
+
+            default :
+                code = 'motorA.stop();\nmotorB.stop();\n';
+                break;
+        }
+    
     return code;
 };
 

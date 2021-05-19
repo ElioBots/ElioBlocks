@@ -135,40 +135,7 @@ Blockly.defineBlocksWithJsonArray(
   // Bloc du bouton du robot
   {
     "type": "buton",
-    "message0": "%{BKY_BUTON_STATE_TEXT} %1 %2",
-    "args0": 
-    [
-      {
-        "type": "field_dropdown",
-        "name": "buton_to_be_or_not_to_be_state_listening",
-        "options": 
-        [
-          [
-            "%{BKY_BUTON_IS_STATE}",
-            "=="
-          ],
-          [
-            "%{BKY_BUTON_NOT_STATE}",
-            "!="
-          ]
-        ]
-      },
-      {
-        "type": "field_dropdown",
-        "name": "buton_state_listening",
-        "options": 
-        [
-          [
-            "%{BKY_BUTON_STATE_TRUE}",
-            "LOW"
-          ],
-          [
-            "%{BKY_BUTON_STATE_FALSE}",
-            "HIGH"
-          ]
-        ]
-      }
-    ],
+    "message0": "%{BKY_BUTON_STATE_TEXT}",
     "output": null,
     "colour": 285,
     "tooltip": "",
@@ -235,15 +202,15 @@ Blockly.defineBlocksWithJsonArray(
         [
           [
             "%{BKY_ROBOT_TURN_RIGHT}",
-            "1"
+            "right"
           ],
           [
             "%{BKY_ROBOT_TURN_LEFT}",
-            "2"
+            "left"
           ],
           [
             "%{BKY_ROBOT_TURN_BACKWARD}",
-            "3"
+            "backward"
           ]
         ]
       }
@@ -285,25 +252,9 @@ Blockly.defineBlocksWithJsonArray(
   // Bloc permettant la lecture d'obstacles
   {
     "type": "obstacle",
-    "message0": "%{BKY_TO_BE_OBSTACLES_OR_NOT_OBSTACLES} %1 %2",
-    "args0": 
+    "message0": "%{BKY_TO_BE_OBSTACLES_OR_NOT_OBSTACLES} %1",
+    "args0" :
     [
-      {
-        "type": "field_dropdown",
-        "name": "obstacle_to_be_or_not_to_be",
-        "options": 
-        [
-          [
-            "%{BKY_IS_OBSTACLE}",
-            "<"
-  
-          ],
-          [
-            "%{BKY_NOT_OBSTACLE}",
-            ">="
-          ]
-        ]
-      },
       {
         "type": "field_dropdown",
         "name": "sensorChoise",
@@ -336,42 +287,7 @@ Blockly.defineBlocksWithJsonArray(
   // Bloc permettant la lecture de ligne
   {
     "type": "line",
-    "message0": "%{BKY_TO_BE_LINE_OR_NOT_LINE} %1 %2",
-    "args0": 
-    [
-      {
-        "type": "field_dropdown",
-        "name": "line_to_be_or_not_to_be",
-        "options": 
-        [
-          [
-            "%{BKY_BE_LINE}",
-            "=="
-  
-          ],
-          [
-            "%{BKY_NOT_LINE}",
-            "!="
-          ]
-        ]
-      },
-      {
-        "type": "field_dropdown",
-        "name": "line_present_or_missing",
-        "options": 
-        [
-          [
-            "%{BKY_LINE_IS_HERE}",
-            "LOW"
-  
-          ],
-          [
-            "%{BKY_LINE_IS_MISSING}",
-            "HIGH"
-          ]
-        ]
-      }
-    ],
+    "message0": "%{BKY_TO_BE_LINE_OR_NOT_LINE}",
     "output": null,
     "colour": 60,
     "tooltip": "",

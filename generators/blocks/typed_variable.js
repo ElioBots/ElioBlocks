@@ -1,4 +1,13 @@
+/**
+ * @license
+ * Copyright 2020 Sébastien CANET
+ * SPDX-License-Identifier: BSD-3-Clause
+ */
 
+/**
+ * @fileoverview Generating Arduino code for typed variable.
+ * @author scanet@libreduc.cc (Sébastien CANET)
+ */
 
 'use strict';
 
