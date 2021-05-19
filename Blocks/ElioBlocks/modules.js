@@ -188,11 +188,11 @@ Blockly.defineBlocksWithJsonArray(
         [
           [
             "%{BKY_ROBOT_MOVE_FORWARD}",
-            "1"
+            "forward"
           ],
           [
             "%{BKY_ROBOT_MOVE_BACKWARD}",
-            "2"
+            "backward"
           ]
         ]
       },
@@ -203,15 +203,15 @@ Blockly.defineBlocksWithJsonArray(
         [
           [
             "%{BKY_ROBOT_SPEED_SLOW}",
-            "lent"
+            "slow"
           ],
           [
             "%{BKY_ROBOT_SPEED_MEDIUM}",
-            "moy"
+            "medium"
           ],
           [
             "%{BKY_ROBOT_SPEED_FAST}",
-            "rapide"
+            "fast"
           ]
         ]
       }
@@ -282,7 +282,7 @@ Blockly.defineBlocksWithJsonArray(
     "tooltip": "",
     "helpUrl": ""
   },
-  // Bloc permettanr la lecture d'obstacles
+  // Bloc permettant la lecture d'obstacles
   {
     "type": "obstacle",
     "message0": "%{BKY_TO_BE_OBSTACLES_OR_NOT_OBSTACLES} %1 %2",

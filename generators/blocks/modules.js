@@ -78,3 +78,64 @@ Blockly.Arduino['line'] = function (block)
     return [code, order];
 };
 
+// Définition du code du bloc de déplacement avant-arrière
+Blockly.Arduino['move'] = function (block) 
+{
+    var direction = block.getFieldValue('directionChoise');
+    var speed = block.getFieldValue('speedChoise');
+    Blockly.Arduino.definitions_['define_motors'] = 'MotorDriver motorA = MotorDriver(1, 14, 12);\nMotorDriver motorB = MotorDriver(2, 15, 13);';
+    var code = 'led_rgb.setPixelColor(0, led_rgb.Color(0, 0, 0));\nled_rgb.show();\n';
+
+    if(direction == 'backward')
+    {
+        switch(speed)
+        {
+            case 'slow' :
+                code = 'motorA.'+direction+'();\nmotorB.'+direction+'();\n';
+                break;
+
+            case 'medium' :
+                code = 'motorA.'+direction+'();\nmotorB.'+direction+'();\n';
+                break;
+
+            case 'fast' :
+                code = 'motorA.'+direction+'();\nmotorB.'+direction+'();\n';
+                break;
+
+            default :
+                code = 'motorA.'+direction+'();\nmotorB.'+direction+'();\n';
+                break;
+        }
+    }
+    else
+    {
+        switch(speed)
+        {
+            case 'slow' :
+                code = 'motorA.'+direction+'();\nmotorB.'+direction+'();\n';
+                break;
+
+            case 'medium' :
+                code = 'motorA.'+direction+'();\nmotorB.'+direction+'();\n';
+                break;
+
+            case 'fast' :
+                code = 'motorA.'+direction+'();\nmotorB.'+direction+'();\n';
+                break;
+
+            default :
+                code = 'motorA.'+direction+'();\nmotorB.'+direction+'();\n';
+                break;
+        }
+    }
+
+    return code;
+};
+
+// Définition du code du bloc servant à arrêter le robot
+Blockly.Arduino['stop'] = function (block) 
+{
+    Blockly.Arduino.definitions_['define_motors'] = 'MotorDriver motorA = MotorDriver(1, 14, 12);\nMotorDriver motorB = MotorDriver(2, 15, 13);';
+    var code = 'motorA.stop();\nmotorB.stop();';
+    return code;
+};
