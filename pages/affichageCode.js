@@ -6,6 +6,7 @@
 // Fonction d'affichage du code
 function displayCode(code)
 {
+    Blockly.Arduino.variableDB_.setVariableMap(workspace.getVariableMap());
     var output = document.getElementById('content_code');
     output.value = code;
     output.focus();
