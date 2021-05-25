@@ -9,8 +9,6 @@ function displayCode(code)
     Blockly.Arduino.variableDB_.setVariableMap(workspace.getVariableMap());
     var output = document.getElementById('content_code');
     output.value = code;
-    output.focus();
-    output.select();
 }  
 
 // Fonction de récupération du code
