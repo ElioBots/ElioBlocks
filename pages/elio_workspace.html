@@ -39,14 +39,12 @@
         <option value="fr" onclick="CreateFrenchFromJSON()" value="Charger l'application en Français">Français</option>
         <option value="en" onclick="CreateEnglishFromJSON()" value="Charge the application in English">English</option>
       </select>
-      <p id="showData"></p>
     </div>
 
-    
     <div id="blockly-div" style=" height: 480px; width: 850px;"></div>
 
     <div class="button-div">
-      <button class="button" onclick="donwloadCode()">Voir mon code</button>
+      <button class="button" onclick="donwloadCode()">Télécharger mon code</button>
     </div>
 
     <textarea id="content_code" readonly="readonly" wrap="off"></textarea>
@@ -114,6 +112,9 @@
     </xml>
     <script src="./code.js"></script>
     <script src="./affichageCode.js"></script>
+    <script src="./FileSaver.js"></script>
+    <script src="./Blob.js"></script>
+    <script src="./import_export.js"></script>
   </body>
 </html>
 
