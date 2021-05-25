@@ -20,3 +20,5 @@ function getCode()
     code += Blockly.Arduino.workspaceToCode();
     displayCode(code);
 }
+
+workspace.addChangeListener(getCode);

@@ -122,7 +122,7 @@ Blockly.defineBlocksWithJsonArray(
       {
         "type": "field_colour",
         "name": "colourChoise",
-        "colour": "#ff0000"
+        "colour": "#ff0000" // Couleur par défaut
       }
     ],
     "previousStatement": null,
