@@ -39,17 +39,16 @@
         <option value="fr" onclick="CreateFrenchFromJSON()" value="Charger l'application en Français">Français</option>
         <option value="en" onclick="CreateEnglishFromJSON()" value="Charge the application in English">English</option>
       </select>
-      <div class="button-div">
-        <button class="button" onclick="donwloadCode()">Télécharger mon code</button>
-        <button class="button" onclick="saveXML()">Sauvegarder en XML</button>
-        <input type="file" name="file" id="file" class="inputfile" />
-        <label for="file">Charger XML</label>
-      </div>
+      <button class="button" onclick="donwloadCode()">Télécharger mon code</button>
+      <button class="button" onclick="saveXML()">Sauvegarder en XML</button>
+      <input type="file" name="file" id="file" class="inputfile" />
+      <label for="file">Charger XML</label>
     </div>
 
-    <div id="blockly-div" style=" height: 480px; width: 850px;"></div>
-
-    <textarea id="content_code" readonly="readonly" wrap="off"></textarea>
+    <div id="devZone">
+      <div id="blockly-div"></div>
+      <textarea id="content_code" readonly="readonly" wrap="off"></textarea>
+    </div>
 
     <xml xmlns="https://developers.google.com/blockly/xml" id="workspaceBlocks" style="display: none"></xml>
 
