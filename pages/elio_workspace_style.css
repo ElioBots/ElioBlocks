@@ -16,9 +16,19 @@ html, body
 
 
 
-#content_code, #blockly-div
+#content_code
 {
-    width: 600px;
+    width: 40%;
+    height: 600px;
+    margin-left: 20px;
+    margin-right:10px;
+    float:left;
+    margin-top: 50px;
+}
+
+#blockly-div
+{
+    width: 55%;
     height: 600px;
     margin-left: 20px;
     margin-right:10px;
