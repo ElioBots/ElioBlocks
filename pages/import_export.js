@@ -38,13 +38,22 @@ function saveXML()
   } 
 }
 
+// Init load event.
+var loadInput = document.getElementById('file');
+loadInput.addEventListener('change', load, false);
+document.getElementById('file').onclick = function() {
+  loadInput.click();
+};
+
 /**
  * Load blocks from local file.
  */
-function load(event) {
+function load(event) 
+{
   var files = event.target.files;
   // Only allow uploading one file.
-  if (files.length != 1) {
+  if (files.length != 1) 
+  {
     return;
   }
 
