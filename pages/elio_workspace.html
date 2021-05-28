@@ -35,11 +35,10 @@
   <body class="light">
     <div id="optionsZone">
       <div id="leftZone">
-        <img src="./icones/elio.png" height="50px" width="50px"/>
+        <img src="./icones/elio-blocks.png" height="50px"/>
         <div class="button-mode">Dark</div>
       </div>
       <select id="changeAppLanguage">
-        <option value="">--Please choose a language--</option>
         <option value="fr" onclick="CreateFrenchFromJSON()" value="Charger l'application en Français">Français</option>
         <option value="en" onclick="CreateEnglishFromJSON()" value="Charge the application in English">English</option>
       </select>
@@ -53,7 +52,7 @@
 
     <div id="devZone">
       <div id="blockly-div"></div>
-      <textarea id="content_code" readonly="readonly" wrap="off"></textarea>
+      <textarea id="content-code" readonly="readonly" wrap="off"></textarea>
     </div>
 
     <xml xmlns="https://developers.google.com/blockly/xml" id="workspaceBlocks" style="display: none"></xml>
