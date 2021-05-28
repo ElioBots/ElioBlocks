@@ -32,17 +32,23 @@
     <script src="../generators/blocks/variables.js"></script>
     <script src="../msg/js/fr.js"></script>
   </head>
-  <body>
-    <div>
+  <body class="light">
+    <div id="optionsZone">
+      <div id="leftZone">
+        <img src="./icones/elio.png" height="50px" width="50px"/>
+        <div class="button-mode">Dark</div>
+      </div>
       <select id="changeAppLanguage">
         <option value="">--Please choose a language--</option>
         <option value="fr" onclick="CreateFrenchFromJSON()" value="Charger l'application en Français">Français</option>
         <option value="en" onclick="CreateEnglishFromJSON()" value="Charge the application in English">English</option>
       </select>
-      <button class="button" onclick="donwloadCode()">Télécharger mon code</button>
-      <button class="button" onclick="saveXML()">Sauvegarder en XML</button>
-      <input type="file" name="file" id="file" class="inputfile" />
-      <label for="file">Charger XML</label>
+      <div>
+        <button class="button" onclick="donwloadCode()">Télécharger mon code</button>
+        <button class="button" onclick="saveXML()">Sauvegarder en XML</button>
+        <input type="file" name="file" id="file" class="inputfile" />
+        <label for="file">Charger XML</label>
+      </div>
     </div>
 
     <div id="devZone">
@@ -111,11 +117,12 @@
         <category name="Variables" custom="VARIABLE">
         </category>
     </xml>
-    <script src="./code.js"></script>
-    <script src="./affichageCode.js"></script>
-    <script src="./FileSaver.js"></script>
-    <script src="./Blob.js"></script>
-    <script src="./import_export.js"></script>
+    <script src="./code/code_init.js"></script>
+    <script src="./code/affichageCode.js"></script>
+    <script src="./code/FileSaver.js"></script>
+    <script src="./code/Blob.js"></script>
+    <script src="./code/import_export.js"></script>
+    <script src="./code/code.js"></script>
   </body>
 </html>
 

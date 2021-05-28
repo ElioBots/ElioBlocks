@@ -9,12 +9,19 @@ html, body
     overflow-x: hidden;
 }
 
-#devZone
+#optionsZone
+{
+    padding-top: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#devZone, #leftZone
 {
     display: flex;
 }
-
-
 
 #content_code
 {
@@ -121,3 +128,71 @@ body
     display: inline-block;
     font-size: 16px;
 }
+
+.button-mode
+{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #333;
+    color: #efefef;
+    border: 1px solid #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+body.dark
+{
+    background-color: #333;
+}
+
+body.dark .button-mode
+{
+    background: #efefef;
+    color: #333;
+    border: 1px solid #efefef;
+
+}
+
+body.dark .button
+{
+    background-color: rgb(33, 49, 95);
+    color: rgb(197, 143, 143);
+}
+
+body.dark .button:hover
+{
+    background-color: rgb(34, 150, 5);
+    color: rgb(255, 255, 255);
+}
+
+body.dark .inputfile + label 
+{
+    background-color: rgb(33, 49, 95);
+    color: rgb(197, 143, 143);
+}
+
+body.dark label:hover 
+{
+    background-color: rgb(34, 150, 5);
+    color: rgb(255, 255, 255);
+}
+
+body.dark #content_code
+{
+    background-color: rgb(94, 124, 117);
+    color: azure;
+}
+
+body.dark .blocklySvg
+{
+    background-color: rgb(94, 124, 117);
+}
+
+/*
+body.dark
+{
+    background-color: rgb(44, 58, 55);
+}*/
