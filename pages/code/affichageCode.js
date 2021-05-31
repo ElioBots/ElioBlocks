@@ -7,7 +7,7 @@
 function displayCode(code)
 {
     Blockly.Arduino.variableDB_.setVariableMap(workspace.getVariableMap());
-    var output = document.getElementById('content-code');
+    var output = document.getElementById('contentCode');
     output.value = code;
 }  
 

@@ -6,81 +6,44 @@
 html, body 
 {
     height: 100%;
-    overflow-x: hidden;
-}
-
-#optionsZone
-{
-    padding-top: 15px;
-    padding-left: 15px;
-    padding-right: 15px;
-    display: flex;
-    justify-content: space-between;
-}
-
-#devZone, #leftZone
-{
-    display: flex;
-    height: 85%;
-}
-
-#content-code
-{
-    width: 40%;
-    min-height: 100%;
-    margin-left: 20px;
-    margin-right:10px;
-    float:left;
-    margin-top: 50px;
-}
-
-#blockly-div
-{
-    width: 55%;
-    min-height: 100%;
-    margin-left: 20px;
-    margin-right:10px;
-    float:left;
-    margin-top: 50px;
-}
-
-#content_code
-{
-    background-color: whitesmoke;
-}
-
-.button-div
-{
-    float: right;
-    margin-top: 550px;
-    margin-right: 20px;
-    margin-bottom: 50px;
-}
-
-.button
-{
-    background-color: royalblue;
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-}
-
-* 
-{
-    box-sizing: border-box;
     margin: 0;
-    padding: 0;
 }
 
 body 
 {
-    background: #efefef;
-    font-family: arial;
-    font-size: 18px;
+    background-color: #fff;
+    font-family: sans-serif;
+    overflow: hidden;
+}
+
+h1 
+{
+    font-weight: normal;
+    font-size: 140%;
+}
+
+table 
+{
+    height: 100%;
+    width: 100%;
+}
+
+#topContent
+{
+    display: flex;
+    justify-content: space-between;
+}
+
+#blocklyArea 
+{
+    height: 99%;
+}
+
+#contentCode
+{
+    height: 99%;
+    width: 99%;
+    border-radius: 10px;
 }
 
 .inputfile 
@@ -93,37 +56,12 @@ body
 	z-index: -1;
 }
 
-.inputfile + label 
+.inputfile + label, .button 
 {
-    background-color: royalblue;
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-}
-
-.inputfile:focus + label,
-.inputfile + label:hover 
-{
-    background-color: red;
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-}
-
-.button:hover
-{
-    background-color: red;
-    border: none;
-    color: white;
-    padding: 15px 32px;
+    border: solid 1px black;
+    border-radius: 5px;
+    padding: 1px 10px;
+    background-color: rgb(rgb(59, 178, 182), green, blue);
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -143,6 +81,7 @@ body
     align-items: center;
     cursor: pointer;
 }
+
 
 body.dark
 {
@@ -181,7 +120,7 @@ body.dark label:hover
     color: rgb(255, 255, 255);
 }
 
-body.dark #content-code
+body.dark #contentCode
 {
     background-color: rgb(94, 124, 117);
     color: azure;
@@ -203,4 +142,3 @@ body.dark .blocklyFlyoutDiv
     background-color: rgb(46, 58, 55);
     color: whitesmoke;
 }
-
