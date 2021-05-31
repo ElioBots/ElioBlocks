@@ -30,20 +30,19 @@
     <script src="../generators/blocks/text.js"></script>
     <script src="../generators/blocks/modules.js"></script>
     <script src="../generators/blocks/variables.js"></script>
-    <script src="../msg/js/fr.js"></script>
   </head>
-  <body class="light">
+  <body class="light" onload="setLanguage()">
     <table>
       <tr>
         <td id="topContent">
-          <div>
+          <div id="leftContent">
             <img src="./icones/elio-blocks.png" height="50px"/>
             <div class="button-mode">Dark</div>
           </div>
           <div>
             <select id="changeAppLanguage">
-              <option value="fr" onclick="CreateFrenchFromJSON()" value="Charger l'application en Français">Français</option>
-              <option value="en" onclick="CreateEnglishFromJSON()" value="Charge the application in English">English</option>
+              <option value="fr">Français</option>
+              <option value="en">English</option>
             </select>
             <button class="button" onclick="donwloadCode()">Télécharger mon code</button>
             <button class="button" onclick="saveXML()">Sauvegarder en XML</button>

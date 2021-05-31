@@ -32,6 +32,13 @@ table
 {
     display: flex;
     justify-content: space-between;
+    padding: 15px;
+}
+
+#leftContent
+{
+    display: flex;
+    flex-direction: row;
 }
 
 #blocklyArea 
