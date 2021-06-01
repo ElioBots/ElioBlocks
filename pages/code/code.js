@@ -33,12 +33,6 @@ const LANGUAGE_NAME = {
 }
 
 var language = document.querySelector('select');
-
-function getStringParamFromUrl(name, defaultValue)
-{
-    var val = location.search.match(new RegExp('[?&]' + name + '=([^&]+)'));
-    return val ? decodeURIComponent(val[1].replace(/\+/g, '%20')) : defaultValue;
-}
   
 function getLang() 
 {
@@ -81,9 +75,5 @@ language.addEventListener('change', function ()
 
 function setLanguage()
 {
-    var script = document.createElement("script");
-    script.type = "text/javascript";
-    script.src = "../msg/js/"+getLang()+".js";
-    document.head.appendChild(script);
-    document.getElementById("changeAppLanguage").value = 'Default';
+    document.getElementById("changeAppLanguage").value = getLang();
 }

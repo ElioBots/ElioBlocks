@@ -1,3 +1,4 @@
+  
 /**
  * @author : Boutrois Romain & Morel Guillaume
  * @description : Partie code de l'environement permettant d'afficher correcctement les blocs.s
@@ -46,5 +47,3 @@ window.addEventListener('resize', onresize, false);
 onresize();
 
 Blockly.svgResize(workspace);
-
-
