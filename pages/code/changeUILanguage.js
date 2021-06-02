@@ -8,7 +8,7 @@ function defineLanguage()
 {
     var language = 'fr'; // default language
 
-    if(getStringParamFromUrl('lang', '') != null)
+    if(getStringParamFromUrl('lang', ''))
     {
         language = getStringParamFromUrl('lang', '');
     }
