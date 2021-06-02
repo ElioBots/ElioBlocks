@@ -29,9 +29,40 @@ Blockly.Arduino['aduino_rgb_leds'] = function (block)
     Blockly.Arduino.setups_['setup_output_RGB_LED'] = 'led_rgb.begin();\n  led_rgb.setPixelColor(0, led_rgb.Color(0, 0, 0));\n  led_rgb.show();';
     var code = 'led_rgb.setPixelColor(0, led_rgb.Color(0, 0, 0));\nled_rgb.show();\n';
 
+    // On crée les variables RGB nécéssaires à l'allumage
+    var colour_red_char = '';
+    var colour_green_char = '';
+    var colour_blue_char = '';
+
+    var compter = 0;
+    
+    // On parcourt la chaîne de caractère hexadécimale afin d'attribuer les valeurs RGB de l'hexa à la bonne variable
+    while(compter < 7)
+    {
+        if(compter > 0 && compter <= 2)
+        {
+            colour_red_char += colour[compter];
+        }
+        else if(compter > 2 && compter <= 4)
+        {
+            colour_green_char += colour[compter];
+        }
+        else if(compter > 4 && compter <= 6)
+        {
+            colour_blue_char += colour[compter];
+        }
+
+        compter ++;
+    }
+
+    // On convertit les valeurs récupérées en décimal
+    var colour_red = parseInt(colour_red_char, 16);
+    var colour_green = parseInt(colour_green_char, 16);
+    var colour_blue = parseInt(colour_blue_char, 16);
+
     if(state == 'HIGH')
     {
-        code = 'led_rgb.setPixelColor(0, '+colour+');\nled_rgb.show();\n';
+        code = 'led_rgb.setPixelColor(0, led_rgb.Color('+colour_red+', '+colour_green+', '+colour_blue+'));\nled_rgb.show();\n';
     }
     return code;
 };
