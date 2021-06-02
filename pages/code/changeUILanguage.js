@@ -13,9 +13,9 @@ function defineLanguage()
         language = getStringParamFromUrl('lang', '');
     }
 
-    var script = document.createElement("script");
-    script.src = "../msg/js/"+language+".js";
-    document.head.insertBefore(script, document.head.children[11]);
+    // On ajoute le script de langue
+    document.open();
+    document.write('<script src="../msg/js/'+language+'.js"></script>');
 }
 
 defineLanguage();
