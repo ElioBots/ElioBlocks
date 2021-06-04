@@ -31,27 +31,24 @@
     <script src="../generators/blocks/variables.js"></script>
   </head>
   <body class="light" onload="setLanguage()">
+    <div id="topContent">
+      <img src="./icones/elio-blocks.png" height="50px"/>
+      <button class="button-mode">Dark</div>
+      <div id="rightContent">
+        <select id="changeAppLanguage">
+          <option value="fr">Français</option>
+          <option value="en">English</option>
+        </select>
+        <button class="button" onclick="donwloadCode()">Télécharger mon code</button>
+        <button class="button" onclick="saveXML()">Sauvegarder en XML</button>
+        <input type="file" name="file" id="file" class="inputfile" />
+        <label for="file">Charger XML</label>
+      </div>
+    </div>
+    
     <table>
       <tr>
-        <td id="topContent">
-          <div id="leftContent">
-            <img src="./icones/elio-blocks.png" height="50px"/>
-            <button class="button-mode">Dark</div>
-          </div>
-          <div>
-            <select id="changeAppLanguage">
-              <option value="fr">Français</option>
-              <option value="en">English</option>
-            </select>
-            <button class="button" onclick="donwloadCode()">Télécharger mon code</button>
-            <button class="button" onclick="saveXML()">Sauvegarder en XML</button>
-            <input type="file" name="file" id="file" class="inputfile" />
-            <label for="file">Charger XML</label>
-          </div>
-        </td>
-      </tr>
-      <tr>
-        <td id="blocklyArea" width="66%"></td>
+        <td id="blocklyArea"></td>
         <td><textarea id="contentCode" readonly="readonly" wrap="off"></textarea></td>
       </tr>
     </table>

@@ -32,17 +32,23 @@ table
 {
     display: flex;
     justify-content: space-between;
-    padding: 15px;
+    padding-top: 15px;
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-bottom: 5px;
 }
 
-#leftContent
+
+#rightContent
 {
-    display: flex;
-    flex-direction: row;
+    float: right;
+    padding-right: 15px;
+    padding-bottom: 5px;
 }
 
 #blocklyArea 
 {
+    width: 66%;
     height: 99%;
 }
 
