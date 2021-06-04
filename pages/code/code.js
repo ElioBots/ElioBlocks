@@ -3,6 +3,9 @@
  * @description : Changements de l'interface
  */
 
+// Themes blockly dark mode :
+
+
 // Light mode / dark mode
 
 const buttonMode = document.querySelector('.button-mode');
@@ -12,15 +15,18 @@ buttonMode.addEventListener('click', () => {
 
     if(body.classList.contains('dark'))
     {
-        body.classList.add('light')
-        body.classList.remove('dark')
-        buttonMode.innerHTML = "Dark"
+        body.classList.add('light');
+        body.classList.remove('dark');
+        buttonMode.innerHTML = "Dark";
+        workspace.setTheme(Blockly.Themes.Classic);
+        
     }
     else if(body.classList.contains('light'))
     {
-        body.classList.add('dark')
-        body.classList.remove('light')
-        buttonMode.innerHTML = "Light"
+        body.classList.add('dark');
+        body.classList.remove('light');
+        buttonMode.innerHTML = "Light";
+        workspace.setTheme(Blockly.Themes.Dark);
     }
 })
 

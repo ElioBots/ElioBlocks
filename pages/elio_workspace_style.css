@@ -132,20 +132,3 @@ body.dark #contentCode
     background-color: #1e1e1e;
     color: azure;
 }
-
-body.dark .blocklySvg
-{
-    background-color: #1e1e1e;
-}
-
-body.dark .blocklyToolboxDiv 
-{
-    background-color: rgb(46, 58, 55);
-    color: whitesmoke;
-}
-
-body.dark .blocklyFlyoutDiv 
-{
-    background-color: rgb(46, 58, 55);
-    color: whitesmoke;
-}
