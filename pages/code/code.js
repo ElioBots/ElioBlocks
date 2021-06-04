@@ -26,12 +26,6 @@ buttonMode.addEventListener('click', () => {
 
 // Change language
 
-// On énumère les langages disponibles
-const LANGUAGE_NAME = {
-    'en': 'English',
-    'fr': 'Français'
-}
-
 var language = document.querySelector('select');
   
 function getLang() 
@@ -39,7 +33,7 @@ function getLang()
     var lang = getStringParamFromUrl('lang', '');
     if (LANGUAGE_NAME[lang] === undefined) 
     {
-      // Default to English.
+      // Default to french.
       lang = 'fr';
     }
     return lang;
@@ -65,7 +59,8 @@ language.addEventListener('change', function ()
     else if (search.match(/[?&]lang=[^&]*/)) 
     {
         search = search.replace(/([?&]lang=)[^&]*/, '$1' + newLang);
-    } else 
+    } 
+    else 
     {
         search = search.replace(/\?/, '?lang=' + newLang + '&');
     }

@@ -332,5 +332,39 @@ Blockly.defineBlocksWithJsonArray(
     "colour": 60,
     "tooltip": "",
     "helpUrl": ""
+  },
+  // bloc delay
+  {
+    "type": "delay",
+    "message0": "%{BKY_WAIT_TEXT} %1 %2",
+    "args0": 
+    [
+      {
+        "type": "field_number",
+        "name": "time_to_wait",
+        "value": 0,
+        "min": 0
+      },
+      {
+        "type": "field_dropdown",
+        "name": "time_type",
+        "options": 
+        [
+          [
+            "%{BKY_WAIT_SECOUNDS}",
+            "secondes"
+          ],
+          [
+            "%{BKY_WAIT_MILLISECOUNDS}",
+            "millisecondes"
+          ]
+        ]
+      }
+    ],
+    "previousStatement": null,
+    "nextStatement": null,
+    "colour": 230,
+    "tooltip": "",
+    "helpUrl": ""
   }
 ]);

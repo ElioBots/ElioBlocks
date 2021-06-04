@@ -461,6 +461,9 @@ Blockly.Msg["TO_BE_LINE_OR_NOT_LINE"] = "une ligne est présente",
 Blockly.Msg["ROBOT_FOLLOW_LINE_TEXT"] = "Suivre la ligne pendant",
 Blockly.Msg["ROBOT_FOLLOW_LINE_SECOUNDS_TEXT"] = "seconde(s)",
 Blockly.Msg["ROBOT_FOLLOW_LINE_SPEED_TEXT"] = "à une vitesse",
+Blockly.Msg["WAIT_TEXT"] = "attendre",
+Blockly.Msg["WAIT_SECOUNDS"] = "seconde(s)",
+Blockly.Msg["WAIT_MILLISECOUNDS"] = "milliseconde(s)",
 
 // Version française de l'interface
 Blockly.Msg["SAVE_CODE"] = "Télécharger le code",
@@ -490,4 +493,5 @@ Blockly.Msg["CATEGORY_FOLLOW_LINE"] = "Suivi de ligne",
 Blockly.Msg["CATEGORY_BUTTON"] = "Bouton",
 Blockly.Msg["CATEGORY_COLORS_SENSOR"] = "Capteur de couleurs",
 Blockly.Msg["CATEGORY_RGB_LED"] = "LED RGB",
+Blockly.Msg["CATEGORY_UTILITIES"] = "Utilitaires",
 Blockly.Msg["CATEGORY_VARIABLES"] = "Variables"

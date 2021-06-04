@@ -199,3 +199,18 @@ Blockly.Arduino['stop'] = function (block)
     var code = 'motorA.stop();\nmotorB.stop();';
     return code;
 };
+
+// Définition du code du bloc delay
+Blockly.Arduino['delay'] = function (block) 
+{
+    var temps = block.getFieldValue('time_to_wait');
+    var echelle = block.getFieldValue('time_type');
+
+    if(echelle == 'secondes')
+    {
+        temps *= 1000;
+    }
+
+    var code = 'delay('+temps+');';
+    return code;
+};
