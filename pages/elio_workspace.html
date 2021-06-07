@@ -39,10 +39,10 @@
           <option value="fr">Français</option>
           <option value="en">English</option>
         </select>
-        <button class="button" onclick="donwloadCode()">Télécharger mon code</button>
-        <button class="button" onclick="saveXML()">Sauvegarder en XML</button>
+        <button class="button" onclick="donwloadCode()">Donwload my code</button>
+        <button class="button" onclick="saveXML()">Save your work</button>
         <input type="file" name="file" id="file" class="inputfile" />
-        <label for="file">Charger XML</label>
+        <label for="file">Import some work</label>
       </div>
     </div>
     
@@ -102,13 +102,17 @@
       <category name="%{BKY_CATEGORY_BUTTON}" colour="285">
         <block type="buton"></block>
       </category>
+      <!-- Catégorie pour un éventuel capteur de couleur, pas encore implémentée
       <category name="%{BKY_CATEGORY_COLORS_SENSOR}">
       </category>
+      -->
       <category name="%{BKY_CATEGORY_RGB_LED}" colour="345">
         <block type="aduino_rgb_leds"></block>
       </category>
+      <!-- Catégorie pour un éventuel buzzer, pas encore implémentée
       <category name="Bip boup">
       </category>
+      -->
       <category name="%{BKY_CATEGORY_UTILITIES}" colour="230">
         <block type="delay"></block>
       </category>

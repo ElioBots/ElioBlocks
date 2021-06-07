@@ -95,6 +95,17 @@ table
     cursor: pointer;
 }
 
+.button:hover 
+{
+    background-color: rgb(14, 44, 216);
+    color: rgb(255, 255, 255);
+}
+
+label:hover 
+{
+    background-color: rgb(14, 44, 216);
+    color: rgb(255, 255, 255);
+}
 
 body.dark
 {
@@ -111,8 +122,8 @@ body.dark .button-mode
 
 body.dark .button
 {
-    background-color: rgb(33, 49, 95);
-    color: rgb(197, 143, 143);
+    background-color: rgb(51, 88, 92);
+    color: rgb(124, 166, 172);
 }
 
 body.dark .button:hover
@@ -123,8 +134,8 @@ body.dark .button:hover
 
 body.dark .inputfile + label 
 {
-    background-color: rgb(33, 49, 95);
-    color: rgb(197, 143, 143);
+    background-color: rgb(51, 88, 92);
+    color: rgb(124, 166, 172);
 }
 
 body.dark label:hover 
