@@ -74,7 +74,35 @@ language.addEventListener('change', function ()
     window.location = window.location.protocol + '//' + window.location.host + window.location.pathname + search;
 })
 
+// Pas dans la doc, on récupère nos trois boutons en vue d'une traduction français - anglais (des boutons)
+const btnCode = document.getElementById('btnCode');
+const btnSave = document.getElementById('btnSave');
+const btnFile = document.getElementById('btnFile');
+
 function setLanguage()
 {
     document.getElementById("changeAppLanguage").value = getLang();
+
+    // traduction des boutons en fonction de la langue choisie
+    switch(getLang())
+    {
+        case 'fr' :
+            btnCode.innerHTML = "Télécharger mon code";
+            btnSave.innerHTML = "Sauvegarder mon travail";
+            btnFile.innerHTML = "Importer du travail";
+            break ;
+
+        case 'en' :
+            btnCode.innerHTML = "Donwload my code";
+            btnSave.innerHTML = "Save your work";
+            btnFile.innerHTML = "Import some work";
+            break ;
+
+        // Français par défaut
+        default :
+            btnCode.innerHTML = "Télécharger mon code";
+            btnSave.innerHTML = "Sauvegarder mon travail";
+            btnFile.innerHTML = "Importer du travail";
+            break ;
+    }
 }

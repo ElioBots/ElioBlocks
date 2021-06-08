@@ -46,4 +46,7 @@ window.addEventListener('resize', onresize, false);
 
 onresize();
 
+// Thème par défaut de blockly, pour un darkmode par défaut
+workspace.setTheme(Blockly.Themes.Dark);
+
 Blockly.svgResize(workspace);

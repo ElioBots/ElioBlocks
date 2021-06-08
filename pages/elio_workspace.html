@@ -30,7 +30,7 @@
     <script src="../generators/blocks/modules.js"></script>
     <script src="../generators/blocks/variables.js"></script>
   </head>
-  <body class="light" onload="setLanguage()">
+  <body class="dark" onload="setLanguage()">
     <div id="topContent">
       <img src="./icones/elio-blocks.png" height="50px"/>
       <button class="button-mode">Dark</div>
@@ -39,10 +39,10 @@
           <option value="fr">Français</option>
           <option value="en">English</option>
         </select>
-        <button class="button" onclick="donwloadCode()">Donwload my code</button>
-        <button class="button" onclick="saveXML()">Save your work</button>
+        <button class="button" id="btnCode" onclick="donwloadCode()">Télécharger mon code</button>
+        <button class="button" id="btnSave" onclick="saveXML()">Sauvegarder mon travail</button>
         <input type="file" name="file" id="file" class="inputfile" />
-        <label for="file">Import some work</label>
+        <label for="file" id="btnFile">Importer du travail</label>
       </div>
     </div>
     
