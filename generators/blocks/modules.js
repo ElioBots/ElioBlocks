@@ -196,7 +196,7 @@ Blockly.Arduino['turn'] = function (block)
 Blockly.Arduino['stop'] = function (block) 
 {
     Blockly.Arduino.definitions_['define_motors'] = 'MotorDriver motorA = MotorDriver(1, pinINA1, pinINA2);\nMotorDriver motorB = MotorDriver(2, pinINB1, pinINB2);';
-    var code = 'motorA.stop();\nmotorB.stop();';
+    var code = 'motorA.stop();\nmotorB.stop();\n';
     return code;
 };
 
@@ -211,6 +211,6 @@ Blockly.Arduino['delay'] = function (block)
         temps *= 1000;
     }
 
-    var code = 'delay('+temps+');';
+    var code = 'delay('+temps+');\n';
     return code;
 };
