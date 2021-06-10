@@ -173,15 +173,15 @@ Blockly.Arduino['turn'] = function (block)
     switch(direction)
         {
             case 'right' :
-                code = 'motorA.backward();\nmotorB.forward();\ndelay(200);\nmotorA.stop();\nmotorB.stop();\n';
+                code = 'motorA.backward();\nmotorB.forward();\ndelay(250);\nmotorA.stop();\nmotorB.stop();\n';
                 break;
 
             case 'left' :
-                code = 'motorA.forward();\nmotorB.backward();\ndelay(200);\nmotorA.stop();\nmotorB.stop();\n';
+                code = 'motorA.forward();\nmotorB.backward();\ndelay(250);\nmotorA.stop();\nmotorB.stop();\n';
                 break;
 
             case 'backward' :
-                code = 'motorA.forward();\nmotorB.backward();\ndelay(400);\nmotorA.stop();\nmotorB.stop();\n';
+                code = 'motorA.forward();\nmotorB.backward();\ndelay(500);\nmotorA.stop();\nmotorB.stop();\n';
                 break;
 
             default :
