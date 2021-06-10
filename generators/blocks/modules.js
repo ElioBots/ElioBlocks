@@ -83,9 +83,9 @@ Blockly.Arduino['buton'] = function (block)
 // Définition du code du bloc obstacle
 Blockly.Arduino['obstacle'] = function (block) 
 {
-    var operator = "<"
+    var operator = ">"
     var position = block.getFieldValue('sensorChoise');
-    var order = (operator == '<' || operator == '>=') ? Blockly.Arduino.ORDER_EQUALITY : Blockly.Arduino.ORDER_RELATIONAL;
+    var order = (operator == '>' || operator == '>=') ? Blockly.Arduino.ORDER_EQUALITY : Blockly.Arduino.ORDER_RELATIONAL;
     Blockly.Arduino.definitions_['define_obstacles_sensor'] = 'int sensorValue[3];\nint obstacleCount = 4;\nADS1015 obstacleSensor;\n\n';
     Blockly.Arduino.definitions_['define_preCode_obstacles_sensor'] = 'int getObstacle(int position)\n{\n   int ambient = 0;\n   int lit = 0;\n   int value = 0;\n\n   digitalWrite(osbtacleCmdPin, LOW);\n   delay(5);\n   ambient = obstacleSensor.getSingleEnded(position);\n\n   digitalWrite(osbtacleCmdPin, HIGH);\n   delay(5);\n   lit = obstacleSensor.getSingleEnded(position);\n\n   value = lit - ambient;\n\n   return value;\n}\n';
     Blockly.Arduino.setups_['setup_obstacles_sensor'] = 'Wire.begin();\nSerial.begin(115200);\n\nif(obstacleSensor.begin(0x48) == false)\n  {\n    Serial.println("Osbtacle sensor not found. Check wiring.");\n    while(1)\n       ;\n  }\n  obstacleSensor.setGain(ADS1015_CONFIG_PGA_16);\n  pinMode(osbtacleCmdPin, OUTPUT);\n  digitalWrite(osbtacleCmdPin, HIGH);';
