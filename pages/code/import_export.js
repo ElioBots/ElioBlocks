@@ -6,7 +6,7 @@
 // Fonction permettant le téléchargement du code arduino en .ino
 function donwloadCode() 
 {
-  var fileName = window.prompt('What would you like to name your file?', 'ElioBlocks')
+  var fileName = window.prompt('How would you like to name your file?', 'ElioBlocks')
   
   // Si l'utilisateur quitte le menu de choix de nom de fichier, on enregistre rien
   if(fileName)
