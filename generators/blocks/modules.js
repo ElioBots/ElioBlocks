@@ -68,13 +68,13 @@ Blockly.Arduino['aduino_rgb_leds'] = function (block)
 };
 
 // Définition du code du bloc bouton
-Blockly.Arduino['buton'] = function (block) 
+Blockly.Arduino['button'] = function (block) 
 {
     var operator = "=="
     var order = (operator == '==' || operator == '!=') ?
             Blockly.Arduino.ORDER_EQUALITY : Blockly.Arduino.ORDER_RELATIONAL;
     var state = "LOW"
-    Blockly.Arduino.setups_['setup_input_buton'] = 'pinMode(buttonPin, INPUT);';
+    Blockly.Arduino.setups_['setup_input_button'] = 'pinMode(buttonPin, INPUT);';
     var argument = 'digitalRead(buttonPin)';
     var code = argument + ' ' + operator + ' ' + state ;
     return [code, order];

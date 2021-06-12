@@ -134,8 +134,8 @@ Blockly.defineBlocksWithJsonArray(
 
   // Bloc du bouton du robot
   {
-    "type": "buton",
-    "message0": "%{BKY_BUTON_STATE_TEXT}",
+    "type": "button",
+    "message0": "%{BKY_BUTTON_STATE_TEXT}",
     "output": null,
     "colour": 285,
     "tooltip": "",
