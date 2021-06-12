@@ -25,7 +25,7 @@ function saveXML()
 {
   var xml = Blockly.Xml.workspaceToDom(Blockly.mainWorkspace);
   var data = Blockly.Xml.domToText(xml);
-  var fileName = window.prompt('What would you like to name your file?', 'ElioBlocks');
+  var fileName = window.prompt('How would you like to name your file?', 'ElioBlocks');
   
   // Store data in blob.
   // var builder = new BlobBuilder();
