@@ -14,7 +14,7 @@ Blockly.defineBlocksWithJsonArray(
     [
       {
         "type": "field_dropdown",
-        "name": "stateChoise",
+        "name": "stateChoice",
         "options": 
         [
           [
@@ -29,7 +29,7 @@ Blockly.defineBlocksWithJsonArray(
       },
       {
         "type": "field_dropdown",
-        "name": "pinChoise",
+        "name": "pinChoice",
         "options": 
         [
           [
@@ -106,7 +106,7 @@ Blockly.defineBlocksWithJsonArray(
     [
       {
         "type": "field_dropdown",
-        "name": "stateChoise",
+        "name": "stateChoice",
         "options": 
         [
           [
@@ -121,7 +121,7 @@ Blockly.defineBlocksWithJsonArray(
       },
       {
         "type": "field_colour",
-        "name": "colourChoise",
+        "name": "colourChoice",
         "colour": "#ff0000" // Couleur par défaut
       }
     ],
@@ -150,7 +150,7 @@ Blockly.defineBlocksWithJsonArray(
     [
       {
         "type": "field_dropdown",
-        "name": "directionChoise",
+        "name": "directionChoice",
         "options": 
         [
           [
@@ -165,7 +165,7 @@ Blockly.defineBlocksWithJsonArray(
       },
       {
         "type": "field_dropdown",
-        "name": "speedChoise",
+        "name": "speedChoice",
         "options": 
         [
           [
@@ -197,7 +197,7 @@ Blockly.defineBlocksWithJsonArray(
     [
       {
         "type": "field_dropdown",
-        "name": "turnChoise",
+        "name": "turnChoice",
         "options": 
         [
           [
@@ -257,7 +257,7 @@ Blockly.defineBlocksWithJsonArray(
     [
       {
         "type": "field_dropdown",
-        "name": "sensorChoise",
+        "name": "sensorChoice",
         "options": 
         [
           [
@@ -301,7 +301,7 @@ Blockly.defineBlocksWithJsonArray(
     [
       {
         "type": "field_number",
-        "name": "timeSecoundsChoise",
+        "name": "timeSecoundsChoice",
         "value": 0,
         "min": 1,
         "max": 10,
@@ -309,7 +309,7 @@ Blockly.defineBlocksWithJsonArray(
       },
       {
         "type": "field_dropdown",
-        "name": "speedChoise",
+        "name": "speedChoice",
         "options": 
         [
           [

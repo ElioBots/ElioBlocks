@@ -13,8 +13,8 @@ goog.require('Blockly.Arduino');
 // Définition du code du bloc LED
 Blockly.Arduino['aduino_leds'] = function (block) 
 {
-    var state = block.getFieldValue('stateChoise');
-    var pin = block.getFieldValue('pinChoise');
+    var state = block.getFieldValue('stateChoice');
+    var pin = block.getFieldValue('pinChoice');
     Blockly.Arduino.setups_['setup_output_'+pin] = 'pinMode('+ pin +', OUTPUT);';
     var code = 'digitalWrite('+ pin + ', ' + state + ');\n'
     return code;
@@ -23,8 +23,8 @@ Blockly.Arduino['aduino_leds'] = function (block)
 // Définition du code du bloc LED RGB
 Blockly.Arduino['aduino_rgb_leds'] = function (block) 
 {
-    var state = block.getFieldValue('stateChoise');
-    var colour = block.getFieldValue('colourChoise');
+    var state = block.getFieldValue('stateChoice');
+    var colour = block.getFieldValue('colourChoice');
     Blockly.Arduino.definitions_['define_RGB_LED'] = 'Adafruit_NeoPixel led_rgb = Adafruit_NeoPixel(1, ledPin, NEO_GRB + NEO_KHZ800);';
     Blockly.Arduino.setups_['setup_output_RGB_LED'] = 'led_rgb.begin();\n  led_rgb.setPixelColor(0, led_rgb.Color(0, 0, 0));\n  led_rgb.show();';
     var code = 'led_rgb.setPixelColor(0, led_rgb.Color(0, 0, 0));\nled_rgb.show();\n';
@@ -84,7 +84,7 @@ Blockly.Arduino['button'] = function (block)
 Blockly.Arduino['obstacle'] = function (block) 
 {
     var operator = ">"
-    var position = block.getFieldValue('sensorChoise');
+    var position = block.getFieldValue('sensorChoice');
     var order = (operator == '>' || operator == '>=') ? Blockly.Arduino.ORDER_EQUALITY : Blockly.Arduino.ORDER_RELATIONAL;
     Blockly.Arduino.definitions_['define_obstacles_sensor'] = 'int sensorValue[3];\nint obstacleCount = 4;\nADS1015 obstacleSensor;\n\n';
     Blockly.Arduino.definitions_['define_preCode_obstacles_sensor'] = 'int getObstacle(int position)\n{\n   int ambient = 0;\n   int lit = 0;\n   int value = 0;\n\n   digitalWrite(osbtacleCmdPin, LOW);\n   delay(5);\n   ambient = obstacleSensor.getSingleEnded(position);\n\n   digitalWrite(osbtacleCmdPin, HIGH);\n   delay(5);\n   lit = obstacleSensor.getSingleEnded(position);\n\n   value = lit - ambient;\n\n   return value;\n}\n';
@@ -112,8 +112,8 @@ Blockly.Arduino['line'] = function (block)
 // Définition du code du bloc de déplacement avant-arrière
 Blockly.Arduino['move'] = function (block) 
 {
-    var direction = block.getFieldValue('directionChoise');
-    var speed = block.getFieldValue('speedChoise');
+    var direction = block.getFieldValue('directionChoice');
+    var speed = block.getFieldValue('speedChoice');
     Blockly.Arduino.definitions_['define_motors'] = 'MotorDriver motorA = MotorDriver(1, pinINA1, pinINA2);\nMotorDriver motorB = MotorDriver(2, pinINB1, pinINB2);';
     var code = 'motorA.stop();\nmotorB.stop();\n';
 
@@ -166,7 +166,7 @@ Blockly.Arduino['move'] = function (block)
 // Définition du code du bloc pour tourner
 Blockly.Arduino['turn'] = function (block) 
 {
-    var direction = block.getFieldValue('turnChoise');
+    var direction = block.getFieldValue('turnChoice');
     Blockly.Arduino.definitions_['define_motors'] = 'MotorDriver motorA = MotorDriver(1, pinINA1, pinINA2);\nMotorDriver motorB = MotorDriver(2, pinINB1, pinINB2);';
     var code = 'motorA.stop();\nmotorB.stop();\n';
 
