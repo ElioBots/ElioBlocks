@@ -1,0 +1,132 @@
+<!-- Page d'affichage de l'application -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>Elio Workspace</title>
+    <link rel="stylesheet" href="elio_workspace_style.css">
+    <script src="../closure/goog/base.js"></script>
+    <script src="../ressources/arduino_compressed.js"></script>
+    <script src="../ressources/blockly_compressed.js"></script>
+    <script src="../ressources/blocks_compressed.js"></script>
+    <script src="./code/changeUILanguage.js"></script>
+    <script src="../blocks/colour.js"></script>
+    <script src="../blocks/lists.js"></script>
+    <script src="../blocks/logic.js"></script>
+    <script src="../blocks/loops.js"></script>
+    <script src="../blocks/math.js"></script>
+    <script src="../blocks/procedures.js"></script>
+    <script src="../blocks/text.js"></script>
+    <script src="../blocks/variables.js"></script>
+    <script src="../blocks/modules.js"></script>
+    <script src="../generators/arduino.js"></script>
+    <script src="../generators/blocks/colour.js"></script>
+    <script src="../generators/blocks/lists.js"></script>
+    <script src="../generators/blocks/logic.js"></script>
+    <script src="../generators/blocks/loops.js"></script>
+    <script src="../generators/blocks/math.js"></script>
+    <script src="../generators/blocks/procedures.js"></script>
+    <script src="../generators/blocks/text.js"></script>
+    <script src="../generators/blocks/modules.js"></script>
+    <script src="../generators/blocks/variables.js"></script>
+  </head>
+  <body class="dark" onload="setLanguage()">
+    <div id="topContent">
+      <img src="./icones/elio-blocks.png" height="50px" style="padding-left: 20px;"/>
+      <button class="button-mode">Light</div>
+      <div id="rightContent">
+        <select id="changeAppLanguage">
+          <option value="fr">Français</option>
+          <option value="en">English</option>
+        </select>
+        <button class="button" id="btnCode" onclick="donwloadCode()">Télécharger mon code</button>
+        <button class="button" id="btnSave" onclick="saveXML()">Sauvegarder mes blocs</button>
+        <input type="file" name="file" id="file" class="inputfile" />
+        <label for="file" id="btnFile">Importer en exemple</label>
+      </div>
+    </div>
+    
+    <table>
+      <tr>
+        <td id="blocklyArea"></td>
+        <td><textarea id="contentCode" readonly="readonly" wrap="off"></textarea></td>
+      </tr>
+    </table>
+  
+    <div id="blocklyDiv" style="position: absolute"></div>
+  
+    <!-- Barre de sélection des blocks -->
+    <xml xmlns="https://developers.google.com/blockly/xml" id="toolbox" style="display: none">
+      <category name="%{BKY_CATEGORY_LOGIC}" colour="210">
+        <block type="controls_if"></block>  
+        <block type="logic_compare"></block>
+        <block type="logic_operation"></block>
+        <block type="logic_boolean"></block>
+        <block type="logic_null"></block>
+        <block type="logic_ternary"></block>
+        <block type="logic_negate"></block>
+      </category>
+      <category name="%{BKY_CATEGORY_LOOPS}" colour="90"></block>
+        <block type="controls_whileUntil"></block>
+        <block type="controls_flow_statements"></block>
+        <block type="controls_for"></block>
+        <block type="controls_forEach"></block>
+      </category>
+      <category name="%{BKY_CATEGORY_MATH}" colour="225">
+        <block type="math_number"></block>
+        <block type="math_arithmetic"></block>
+        <block type="math_single"></block>
+        <block type="math_trig"></block>
+        <block type="math_number_property"></block>
+        <block type="math_round"></block>
+        <block type="math_on_list"></block>      
+        <block type="math_random_int"></block> 
+        <block type="math_change"></block>
+        <block type="math_modulo"></block>
+        <block type="math_constrain"></block> 
+        <block type="math_atan2"></block>      
+      </category>
+      <category name="%{BKY_CATEGORY_MOVEMENT}" colour="180">
+        <block type="move"></block>
+        <block type="turn"></block>
+        <block type="rotation"></block>
+        <block type="stop"></block>
+      </category>
+      <category name="%{BKY_CATEGORY_OBSTACLES}" colour="30">
+        <block type="obstacle"></block>
+      </category>
+      <category name="%{BKY_CATEGORY_FOLLOW_LINE}" colour="60">
+        <block type="line"></block>
+        <block type="follow_line"></block>
+      </category>
+      <category name="%{BKY_CATEGORY_BUTTON}" colour="285">
+        <block type="button"></block>
+      </category>
+      <!-- Catégorie pour un éventuel capteur de couleur, pas encore implémentée
+      <category name="%{BKY_CATEGORY_COLORS_SENSOR}">
+      </category>
+      -->
+      <category name="%{BKY_CATEGORY_RGB_LED}" colour="345">
+        <block type="aduino_rgb_leds"></block>
+      </category>
+      <!-- Catégorie pour un éventuel buzzer, pas encore implémentée
+      <category name="Bip boup">
+      </category>
+      -->
+      <category name="%{BKY_CATEGORY_UTILITIES}" colour="230">
+        <block type="delay"></block>
+      </category>
+      
+      <sep></sep>
+      <category name="%{BKY_CATEGORY_VARIABLES}" custom="VARIABLE" colour="330">
+      </category>
+    </xml>
+    <script src="./code/FileSaver.js"></script>
+    <script src="./code/Blob.js"></script>
+    <script src="./code/code_init.js"></script>
+    <script src="./code/affichageCode.js"></script>
+    <script src="./code/import_export.js"></script>
+    <script src="./code/code.js"></script>
+  </body>
+</html>
+

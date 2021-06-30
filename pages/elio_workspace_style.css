@@ -1,0 +1,151 @@
+/**
+ * Auteurs : Boutrois Romain & Morel Guillaume
+ * Description : CSS de l'interface de développement
+ */
+
+html, body 
+{
+    height: 100%;
+    margin: 0;
+}
+
+body 
+{
+    background-color: #fff;
+    font-family: sans-serif;
+    overflow: hidden;
+}
+
+h1 
+{
+    font-weight: normal;
+    font-size: 140%;
+}
+
+table 
+{
+    height: 100%;
+    width: 100%;
+}
+
+#topContent
+{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 15px;
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-bottom: 5px;
+}
+
+
+#rightContent
+{
+    float: right;
+    padding-right: 15px;
+    padding-bottom: 5px;
+}
+
+#blocklyArea 
+{
+    width: 66%;
+    height: 99%;
+}
+
+#contentCode
+{
+    height: 99%;
+    width: 99%;
+    border-radius: 10px;
+}
+
+.inputfile 
+{
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+
+.inputfile + label, .button 
+{
+    border: solid 1px black;
+    border-radius: 5px;
+    padding: 1px 10px;
+    background: rgb(221, 221, 221);
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.button-mode
+{
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: #333;
+    color: #efefef;
+    border: 1px solid #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.button:hover 
+{
+    background-color: rgb(14, 44, 216);
+    color: rgb(255, 255, 255);
+}
+
+label:hover 
+{
+    background-color: rgb(14, 44, 216);
+    color: rgb(255, 255, 255);
+}
+
+body.dark
+{
+    background-color: #333;
+}
+
+body.dark .button-mode
+{
+    background: #efefef;
+    color: #333;
+    border: 1px solid #efefef;
+
+}
+
+body.dark .button
+{
+    background-color: rgb(97, 97, 97);
+    color: rgb(228, 228, 228);
+}
+
+body.dark .button:hover
+{
+    background-color: rgb(22, 112, 0);
+    color: rgb(255, 255, 255);
+}
+
+body.dark .inputfile + label 
+{
+    background-color: rgb(97, 97, 97);
+    color: rgb(228, 228, 228);
+}
+
+body.dark label:hover 
+{
+    background-color: rgb(22, 112, 0);
+    color: rgb(255, 255, 255);
+}
+
+body.dark #contentCode
+{
+    background-color: #1e1e1e;
+    color: azure;
+}
