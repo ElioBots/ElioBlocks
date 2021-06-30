@@ -74,7 +74,7 @@ table
     border: solid 1px black;
     border-radius: 5px;
     padding: 1px 10px;
-    background: rgb(223, 188, 188);
+    background: rgb(221, 221, 221);
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -83,8 +83,8 @@ table
 
 .button-mode
 {
-    width: 50px;
-    height: 50px;
+    width: 42px;
+    height: 42px;
     border-radius: 50%;
     background: #333;
     color: #efefef;
@@ -122,25 +122,25 @@ body.dark .button-mode
 
 body.dark .button
 {
-    background-color: rgb(51, 88, 92);
-    color: rgb(124, 166, 172);
+    background-color: rgb(97, 97, 97);
+    color: rgb(228, 228, 228);
 }
 
 body.dark .button:hover
 {
-    background-color: rgb(34, 150, 5);
+    background-color: rgb(22, 112, 0);
     color: rgb(255, 255, 255);
 }
 
 body.dark .inputfile + label 
 {
-    background-color: rgb(51, 88, 92);
-    color: rgb(124, 166, 172);
+    background-color: rgb(97, 97, 97);
+    color: rgb(228, 228, 228);
 }
 
 body.dark label:hover 
 {
-    background-color: rgb(34, 150, 5);
+    background-color: rgb(22, 112, 0);
     color: rgb(255, 255, 255);
 }
 

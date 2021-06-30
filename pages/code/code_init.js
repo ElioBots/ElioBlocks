@@ -19,6 +19,12 @@ var workspace = Blockly.inject(blocklyDiv,
         scaleSpeed: 1.2,
         pinch: true
     },
+    //grid:
+    //      {
+    //        spacing: 25,
+    //        length: 3,
+    //        snap: true
+    //      },
     trashcan: true
 });
 

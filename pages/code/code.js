@@ -88,21 +88,21 @@ function setLanguage()
     {
         case 'fr' :
             btnCode.innerHTML = "Télécharger mon code";
-            btnSave.innerHTML = "Sauvegarder mon travail";
-            btnFile.innerHTML = "Importer du travail";
+            btnSave.innerHTML = "Sauvegarder mes blocs";
+            btnFile.innerHTML = "Importer un exemple";
             break ;
 
         case 'en' :
             btnCode.innerHTML = "Donwload my code";
-            btnSave.innerHTML = "Save your work";
-            btnFile.innerHTML = "Import some work";
+            btnSave.innerHTML = "Save my blocks";
+            btnFile.innerHTML = "Import some example";
             break ;
 
         // Français par défaut
         default :
             btnCode.innerHTML = "Télécharger mon code";
-            btnSave.innerHTML = "Sauvegarder mon travail";
-            btnFile.innerHTML = "Importer du travail";
+            btnSave.innerHTML = "Sauvegarder mes blocs";
+            btnFile.innerHTML = "Importer un exemple";
             break ;
     }
 }
